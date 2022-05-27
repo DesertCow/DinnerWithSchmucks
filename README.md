@@ -6,15 +6,17 @@
 
 <h5 align="center">
 
-🎯 Project 1 🎯<br>
-<br>
-(WW23.1) / June 6th 2022
 
+🎯 Project 1 🎯
+(WW23.1) / June 6th 2022
 Version 0.1</h5>
 </div>
 
 ---
 
+
+<br>
+<br>
 <br>
 <br>
 
@@ -45,7 +47,7 @@ Version 0.1</h5>
 <br>
 <br>
 
-<h3 align="center">📢 📢 Wireframe 📢 📢</h3>
+<h3 align="center">📐 📐 Wireframe 📐 📐</h3>
 
 ----
 <p align="center">
@@ -81,34 +83,100 @@ Version 0.1</h5>
 <br>
 <br>
 
-<h3 align="center">📢 📢 API Information 📢 📢</h3>
+<h3 align="center">🚇 🚇 API Information 🚇 🚇</h3>
+
+----
+
+
+#### Chuck Norris API
+
+- Website: <https://api.chucknorris.io/>
+- API Link: <https://api.chucknorris.io/jokes/>
+- Format: ````JSON / GET````
+- Notes: 
+
+  ##### API Calls
+
+  - ````https://api.chucknorris.io/jokes/random?category={category}````
+  - ````https://api.chucknorris.io/jokes/categories````
+  - ````https://api.chucknorris.io/jokes/search?query={query}````
+<br>
+<br>
+
+#### Ron Swanson API
+
+- Website: <https://github.com/jamesseanwright/ron-swanson-quotes>
+- API Link: <https://ron-swanson-quotes.herokuapp.com/v2/quotes>
+- Format: ````JSON / GET````
+- Notes: 
+  - The ````Access-Control-Allow-Origin```` header is set to ````*```` so that you can make requests from any domain.
+
+##### API Calls
+
+  - ````https://ron-swanson-quotes.herokuapp.com/v2/quotes````
+  - ````https://ron-swanson-quotes.herokuapp.com/v2/quotes/<count>````
+  - ````https://ron-swanson-quotes.herokuapp.com/v2/quotes/search/<term>````
+
+<br>
+<br>
+<br>
+<br>
+
+<h3 align="center">🖼️ 🖼️ CSS Information 🖼️ 🖼️</h3>
+
+----
+
+#### Metro 4 
+
+- Website: <https://metroui.org.ua/>
+- Source Status: open-source
+- License: **The MIT License**
+- Version: **4.0**
+- Documentation: <https://metroui.org.ua/m4q-about.html>
+- Project Integration: 
+    **- HTML :** ````
+          "<link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
+          ````
+  
+    **- JS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:**````
+        <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+      ````
+
+#### CSS RESET
+
+- Website: <https://meyerweb.com/eric/tools/css/reset/>
+- Version: **2.0** [1-26-2011]
+- License: **none** (public domain)
+          
+
+<script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+
+<br>
+<br>
+<br>
+<br>
+
+<h3 align="center">👨‍💻 👨‍💻 Development Team 👨‍💻 👨‍💻</h3>
 
 ----
 
 <br>
+
+- Dante Stargiotti
+- Parin Thalangdee
+- Eric Nguyen
+- Clayton Skaggs
 <br>
 <br>
 <br>
 
-<h3 align="center">📢 📢 CSS Information 📢 📢</h3>
-
-----
-
-<br>
-<br>
-<br>
-<br>
-
-<h3 align="center">📢 📢 Author/Team 📢 📢</h3>
+<h3 align="center">⌛ ⌛ Project Timeline ⌛ ⌛</h3>
 
 ----
 
 <br>
-<br>
-<br>
-<br>
 
-<h3 align="center">📢 📢 Project Timeline 📢 📢</h3>
+- Version 0.5 HTML: **May 31st**
+- Final Version Deadline: **June 6th**
 
-----
 
