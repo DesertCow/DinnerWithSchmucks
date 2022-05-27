@@ -51,7 +51,7 @@ Version 0.1</h5>
 
 ----
 <p align="center">
-  <img src="./assets/img/Index-html.png" width="550" alt="Home/Landing page")
+  <img src="./assets/img/Index-HTML.png" width="550" alt="Home/Landing page")
 </p>
 <h5 align="center">Home Page Wireframe <br>(index.html)</h5>
 <br>
