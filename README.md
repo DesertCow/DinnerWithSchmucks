@@ -7,8 +7,8 @@
 <h5 align="center">
 
 
-🎯 Project 1 🎯
-(WW23.1) / June 6th 2022
+🎯 Project 1 🎯<br>
+(WW23.1) / June 6th 2022<br>
 Version 0.1</h5>
 </div>
 
