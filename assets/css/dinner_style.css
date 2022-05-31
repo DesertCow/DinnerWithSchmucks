@@ -1,35 +1,58 @@
 :root {
+
+  --summaryButtonColor: #C3D9AA;
+  --titleTextColor: #DDA15E;
+  --mainBGColor: #BC6C25;
+
   --main-bg-color: brown;
   --boxHeight: 110px;
 
   --hourBoxColor: #D4A373;
   --meetingBoxColor: #FAEDCD;
 
-  --summaryButtonColor: #13a92c;
+  
   --saveBoxShade: #515B2F;
 
 }
 
 *{ margin: 0px;}
 
-.recpieNameTitle {
+.recipeNameTitle {
   font-size: 80px;
+  color: var(--titleTextColor);
 }
 
 .summaryButton {
   background-color: var(--summaryButtonColor);
   min-height: 100px;
+  font-size: 50px;
   width: 80%;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
 }
 
-.recpieCard {
+.recipeCard {
   min-height: 500px;
   min-width: 500px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
 }
 
 .beerCard {
   min-height: 500px;
   min-width: 500px;
+  max-width: 800px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
 }
 
 .full-width {
@@ -41,8 +64,27 @@
   margin-right: -50vw;
 }
 
+.beerCardBeerFacts {
+  font-size: 18px;
+}
+
+.beerCardBeerTitle {
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.recipeCardNameTitle {
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+
+}
+
 body {
   background-image: url(../../assets/img/eaters-collective-ESmxug33C0c-unsplash.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
+  background-color: var(--mainBGColor);
 }
