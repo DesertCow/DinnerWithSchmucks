@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
+  <link rel="stylesheet" href="./assets/css/dinner_style.css" />
+  <link rel="stylesheet" href="./assets/css/reset.css" />
+  <title>Dinner Selection</title>
+</head>
+<body>
+  
+  <div class="wrapper d-flex justify-content-center align-items-end">
+    <div class="container">
+      <header class="jumbotron">
+        <h1 class="display-3 text-center recpieNameTitle">Recpie Name</h1>
+      </header>
+      <div class="row d-flex flex-justify-around mt-8">
+        <card data-role="panel" class="recpieCard">
+          <div class="card-header recpieCardNameTitle">
+            Recpie Name
+          </div>
+          <div class="card-content p-2 recpieCardFullRecpie">
+            Actual Recpie Directions
+          </div>
+        </card>
+        <card data-role="panel" class="beerCard">
+          <div class="card-header beerCardBeerTitle">
+            Beer Name
+          </div>
+          <div class="card-content p-2 beerCardBeerFacts">
+           Beer Facts + Picture
+          </div>
+        </card>
+      </div>
+      <div class="row m-5 p-5 d-flex justify-content-center">
+        <p class="card-body summaryButton">Summary Page</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+  <script src="./assets/js/dinnerScript.js"></script>
+</body>
+</html>

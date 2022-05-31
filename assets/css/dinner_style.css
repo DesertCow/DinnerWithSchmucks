@@ -1,0 +1,48 @@
+:root {
+  --main-bg-color: brown;
+  --boxHeight: 110px;
+
+  --hourBoxColor: #D4A373;
+  --meetingBoxColor: #FAEDCD;
+
+  --summaryButtonColor: #13a92c;
+  --saveBoxShade: #515B2F;
+
+}
+
+*{ margin: 0px;}
+
+.recpieNameTitle {
+  font-size: 80px;
+}
+
+.summaryButton {
+  background-color: var(--summaryButtonColor);
+  min-height: 100px;
+  width: 80%;
+}
+
+.recpieCard {
+  min-height: 500px;
+  min-width: 500px;
+}
+
+.beerCard {
+  min-height: 500px;
+  min-width: 500px;
+}
+
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+body {
+  background-image: url(../../assets/img/eaters-collective-ESmxug33C0c-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
