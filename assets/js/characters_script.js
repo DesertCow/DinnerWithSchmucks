@@ -7,6 +7,26 @@ const key = {
   }
 };
 
+var quoteMessageEl = document.getElementById('quote-message')
+
+document.getElementById('chuckQuote').addEventListener
+  ('click', chuckQuote);
+
+async function chuckQuote() {
+  fetch('https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random', key)
+    .then(function (response) {
+
+      return response.json();
+    })
+
+    .then(function (data) {
+      console.log(data);
+
+      quoteMessageEl.textContent = "Quote: " + data.value;
+
+    }
+	 }
+
 let summary = {
   "joke": "~~BAD JOKE ~~",
 
@@ -99,6 +119,15 @@ async function michaelScottQuote() {
     });
   return;
 }
+
+// fetch(https://api.allorigins.win/get?url=${encodeURIComponent('https://michael-scott-quotes-api.herokuapp.com/randomQuote')})
+//       .then(r => r.json())
+//     .then(data => {
+//       // the actual data from the api
+//       var content = JSON.parse(data.contents)
+
+//       console.log(content)
+//     })
 
 async function nicholasCageQuote() {
 
