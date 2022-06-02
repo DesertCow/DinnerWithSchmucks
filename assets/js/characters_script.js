@@ -10,25 +10,6 @@ const key = {
 
 var quoteMessageEl = document.getElementById('quote-message')
 
-document.getElementById('chuckQuote').addEventListener
-  ('click', chuckQuote);
-
-async function chuckQuote() {
-  
-  fetch('https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random', key)
-    .then(function (response) {
-
-      return response.json();
-    })
-
-    .then(function (data) {
-      console.log(data);
-
-      quoteMessageEl.textContent = "Quote: " + data.value;
-
-    }
-	 }
-
 let summary = {
   "joke": "~~BAD JOKE ~~",
 
@@ -40,9 +21,8 @@ var nicholasQuoteEL = document.getElementById('nicholasQuote');
 var michaelQuoteEL = document.getElementById('michaelQuote');
 
 
-var quoteMessageEL = document.getElementById('quoteMessage');
-
-var userInfoEL = document.getElementById('userInfo');
+var quoteMessageEL = document.getElementById('quote-message');
+var userInfoEL = document.getElementById('userDirections');
 
 
 
@@ -54,6 +34,7 @@ chuckQuoteEL.addEventListener("click", function (clickEvent) {
   chuckQuote();
 
 });
+
 
 ronQuoteEL.addEventListener("click", function (clickEvent) {
 
@@ -73,7 +54,26 @@ michaelQuoteEL.addEventListener("click", function (clickEvent) {
 
 });
 
-//var tempJoke = chuckQuote();
+//##################### Functions #####################
+
+async function chuckQuote() {
+
+  fetch('https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random', key)
+    .then(function (response) {
+
+      return response.json();
+    })
+
+    .then(function (data) {
+
+      summary.joke = data.value + " - The Chuck Norris";
+      var jokeEL = document.createElement("h1");
+      jokeEL.textContent = summary.joke;
+      quoteMessageEL.replaceChild(jokeEL, quoteMessageEL.childNodes[1]);
+
+    })
+}
+
 
 async function ronSwansonQuote(reqCount, term) {
 
@@ -87,8 +87,10 @@ async function ronSwansonQuote(reqCount, term) {
     })
     .then(function (data) {
 
-      summary.joke = data;
-      quoteMessageEL.textContent = summary.joke;
+      summary.joke = data + " - Ron Swanson";
+      var jokeEL = document.createElement("h1");
+      jokeEL.textContent = summary.joke;
+      quoteMessageEL.replaceChild(jokeEL, quoteMessageEL.childNodes[1]);
 
       return summary.joke;
 
@@ -100,6 +102,10 @@ async function michaelScottQuote() {
 
   var apiURL = "https://michael-scott-quotes-api.herokuapp.com/randomQuote";
 
+  apiURL = "https://api.allorigins.win/raw?url=" + apiURL;
+
+  console.log(apiURL)
+
   fetch(apiURL)
     .then(function (response) {
 
@@ -109,27 +115,16 @@ async function michaelScottQuote() {
     })
     .then(function (data) {
 
-
-      console.log("Data = " + data);
-      summary.joke = data;
-      console.log("summary.joke =" + summary.joke);
-
-      quoteMessageEL.textContent = summary.joke;
+      summary.joke = data.quote + " - Michael Scott";
+      var jokeEL = document.createElement("h1");
+      jokeEL.textContent = summary.joke;
+      quoteMessageEL.replaceChild(jokeEL, quoteMessageEL.childNodes[1]);
 
       return summary.joke;
 
     });
   return;
 }
-
-// fetch(https://api.allorigins.win/get?url=${encodeURIComponent('https://michael-scott-quotes-api.herokuapp.com/randomQuote')})
-//       .then(r => r.json())
-//     .then(data => {
-//       // the actual data from the api
-//       var content = JSON.parse(data.contents)
-
-//       console.log(content)
-//     })
 
 async function nicholasCageQuote() {
 
@@ -144,14 +139,10 @@ async function nicholasCageQuote() {
     })
     .then(function (data) {
 
-      summary.joke = data;
-      // quoteMessageEL.textContent = summary.joke;
-
-      //jokeEL.textContent = summary.joke;
-
-      var jokeEL = document.createElement("h2");
-      quoteMessageEL.removeChild(quoteMessageEL.firstChild);
-      quoteMessageEL.appendChild(jokeEL);
+      summary.joke = data + " - Nicholas Cage";
+      var jokeEL = document.createElement("h1");
+      jokeEL.textContent = summary.joke;
+      quoteMessageEL.replaceChild(jokeEL, quoteMessageEL.childNodes[1]);
 
       return summary.joke;
 
@@ -159,5 +150,3 @@ async function nicholasCageQuote() {
   return;
 }
 
-    })
-  }
