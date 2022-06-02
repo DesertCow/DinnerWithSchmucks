@@ -79,13 +79,13 @@ img {
   z-index: -1;
 }
 
-.quote-message h1 {
+.quote-message {
   position: absolute;
   bottom: 0;
   right: 0;
   left:0;
   text-align: center;
   font-size: 40px;
-  font-family: 'Major Mono Display',
-    monospace;
+  font-style: bold;
+  font-family: 'Major Mono Display', monospace;
 }

@@ -1,3 +1,4 @@
+// Chuck Norris Button API
 const key = {
   method: 'GET',
   headers: {
@@ -7,18 +8,22 @@ const key = {
   }
 };
 
+var quoteMessageEl = document.getElementById('quote-message')
+
 document.getElementById('chuckQuote').addEventListener
 ('click', chuckQuote);
 
 async function chuckQuote() {
   fetch('https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random',key)
-  .then(response => response.json())
-  .then(response => console.log(response.value))
-  // const data = await response.json();
-  // const {norris} = data;
- 
-  // document.getElementById('val').innerHTML = response.value
-  
-  .catch(err => console.error(err));
-}
+    .then(function (response) {
+      
+      return response.json();
+    })
 
+    .then(function (data) {
+      console.log(data);
+
+      quoteMessageEl.textContent = "Quote: " + data.value ;
+
+    })
+  }
