@@ -20,6 +20,8 @@ var michaelQuoteEL = document.getElementById('michaelQuote');
 
 var quoteMessageEL = document.getElementById('quoteMessage');
 
+var userInfoEL = document.getElementById('userInfo');
+
 
 
 
@@ -50,25 +52,6 @@ michaelQuoteEL.addEventListener("click", function (clickEvent) {
 });
 
 //var tempJoke = chuckQuote();
-
-async function chuckQuote() {
-  fetch('https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random', key)
-    .then(function (response) {
-
-      return response.json();
-
-    })
-    .then(function (data) {
-
-      summary.joke = data.value;
-      quoteMessageEL.textContent = summary.joke;
-
-      return summary.joke;
-
-    });
-  return;
-}
-
 
 async function ronSwansonQuote(reqCount, term) {
 
@@ -131,7 +114,13 @@ async function nicholasCageQuote() {
     .then(function (data) {
 
       summary.joke = data;
-      quoteMessageEL.textContent = summary.joke;
+      // quoteMessageEL.textContent = summary.joke;
+
+      //jokeEL.textContent = summary.joke;
+
+      var jokeEL = document.createElement("h2");
+      quoteMessageEL.removeChild(quoteMessageEL.firstChild);
+      quoteMessageEL.appendChild(jokeEL);
 
       return summary.joke;
 
