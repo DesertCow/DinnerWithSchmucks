@@ -1,3 +1,4 @@
+// Chuck Norris Button API
 const key = {
   method: 'GET',
   headers: {
@@ -13,6 +14,7 @@ document.getElementById('chuckQuote').addEventListener
   ('click', chuckQuote);
 
 async function chuckQuote() {
+  
   fetch('https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random', key)
     .then(function (response) {
 
@@ -157,3 +159,5 @@ async function nicholasCageQuote() {
   return;
 }
 
+    })
+  }
