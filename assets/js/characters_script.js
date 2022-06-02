@@ -27,11 +27,6 @@ async function chuckQuote() {
       quoteMessageEl.textContent = "Quote: " + data.value;
 
     })
-	 }
-
-let summary = {
-  "joke": "~~BAD JOKE ~~",
-
 }
 
 // var chuckQuoteEL = document.getElementById('chuckQuote');
