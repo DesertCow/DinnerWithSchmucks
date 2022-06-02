@@ -51,14 +51,14 @@ Version 0.1</h5>
 
 ----
 <p align="center">
-  <img src="./assets/img/Index-HTML.png" width="550" alt="Home/Landing page")
+  <img src="./assets/images/Index-HTML.png" width="550" alt="Home/Landing page")
 </p>
 <h5 align="center">Home Page Wireframe <br>(index.html)</h5>
 <br>
 <br>
 
 <p align="center">
-  <img src="./assets/img/Characters-HTML.png" width="550" alt="User selects who they want to have dinner with")
+  <img src="./assets/images/Characters-HTML.png" width="550" alt="User selects who they want to have dinner with")
 </p>
 <h5 align="center">Characters Selection Wireframe <br>(characters.html)</h5>
 
@@ -66,7 +66,7 @@ Version 0.1</h5>
 <br>
 
 <p align="center">
-  <img src="./assets/img/Dinner-HTML.png" width="550" alt="User selects who they want to have dinner with")
+  <img src="./assets/images/Dinner-HTML.png" width="550" alt="User selects who they want to have dinner with")
 </p>
 <h5 align="center">Recpie/Beer Page Wireframe <br>(dinner.html)</h5>
 
@@ -74,7 +74,7 @@ Version 0.1</h5>
 <br>
 
 <p align="center">
-  <img src="./assets/img/Summary-HTML.png" width="550" alt="User selects who they want to have dinner with")
+  <img src="./assets/images/Summary-HTML.png" width="550" alt="User selects who they want to have dinner with")
 </p>
 <h5 align="center">Summary Page w/Character Qoute <br>(summary.html)</h5>
 
