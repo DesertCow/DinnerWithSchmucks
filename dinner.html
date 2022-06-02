@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
+  <link rel="stylesheet" href="./assets/css/dinner_style.css" />
+  <link rel="stylesheet" href="./assets/css/reset.css" />
+  <title>Dinner Selection</title>
+</head>
+<body>
+  
+  <div class="wrapper d-flex justify-content-center align-items-end">
+    <div class="container">
+      <header class="jumbotron">
+        <h1 class="display-3 text-center recipeNameTitle mt-5">Daves Famous Bruger</h1>
+      </header>
+      <div class="d-flex flex-row flex-justify-around mt-8">
+        <card data-role="panel" class="recipeCard m-5 p-5">
+          <div class="card-header text-center recipeCardNameTitle">
+            Daves Famous Burger
+          </div>
+          <div class="card-content p-2 recipeCardFullrecipe text-center">          
+            <img class="col recipeImg" src="./assets/images/burger_example.jpg" alt="Current Recipe Recommendation" style="width: 250px; margin:20px;">
+            <ul class="text-center foodStats m-5">
+              <li>Calories: 584</li>
+              <li>Carbs: 84g</li>
+              <li>Fat: 20g</li>
+              <li>Protein: 19g</li>
+            </ul>
+          </div>
+        </card>
+        <card data-role="panel" class="beerCard m-5 p-5">
+          <div class="card-header beerCardBeerTitle">
+            <h1 class="text-center">Fosters</h1>
+          </div>
+          <div class="row card-content p-2">
+           <p class="col beerCardBeerFacts">
+            The first beer in the world was brewed by the ancient Chinese around the year 7000 BCE (known as kui). In the west,
+            however, the process now recognized as beer brewing began in Mesopotamia at the Godin Tepe settlement now in modern-day
+            Iran between 3500 - 3100 BCE.
+           <p>
+          <img class="col beerImg" src="./assets/images/FOSTERS-Beer.png" alt="Current Beer Recommendation" style="width: 250px; margin:20px;">
+           </p>
+          </div>
+        </card>
+      </div>
+      <div class="row m-5 p-5 d-flex justify-content-center">
+        <p id="summaryButtonShadow" class="card-body text-center p-9 m-5 summaryButton">Summary Page</pid=class=>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+  <script src="./assets/js/dinnerScript.js"></script>
+</body>
+</html>

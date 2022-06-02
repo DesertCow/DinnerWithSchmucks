@@ -122,6 +122,69 @@ Version 0.1</h5>
 <br>
 <br>
 
+<h3 align="center">⚙️ ⚙️ Main Functions ⚙️ ⚙️</h3>
+
+----
+
+##### 📚 getBeer()
+- ✉️: ~~ No Inputs ~~
+- 📦: *returns* **ARRAY**
+  - Beer name
+  - Beer information
+  - Beer picture
+<br>
+
+##### 📚 getrecipe()
+- ✉️: ~~ No Inputs ~~
+- 📦: *returns* **ARRAY**
+  - recipe name
+  - recipe facts
+  - recipe picture
+  - recipe directions
+<br>
+
+##### 📚 chuckNorrisJoke()
+- ✉️: ~~ No Inputs ~~
+- 📦: *returns* random joke **STRING**
+  - joke 
+<br>
+
+##### 📚 nicolasCageQuote()
+- ✉️: ~~ No Inputs ~~
+- 📦: *returns* **ARRAY** with 
+    - qoute 
+    - year 
+    - movie
+<br>
+
+- API Call:
+    ```
+    https://nicolas-cage-quotes.herokuapp.com/quotes?info=true
+    ```
+- API Response:
+    ```
+    {
+        "title": "Con Air",
+        "year": "1997",
+        "quote": "Put… the bunny… back… in the box."
+      },
+
+    ```
+
+##### 📚 ronSwansonQuote()
+- ✉️: ~~ No Inputs ~~
+- 📦: *returns* random quote text as **STRING**
+    - quote
+<br>
+
+##### 📚 michaelScottQuote()
+
+- ✉️: ~~ No Inputs ~~
+- 📦: *returns* random quote text as **STRING**
+  - quote
+<br>
+<br>
+
 <h3 align="center">🖼️ 🖼️ CSS Information 🖼️ 🖼️</h3>
 
 ----
