@@ -24,6 +24,7 @@
 
 .summaryButton {
   background-color: var(--summaryButtonColor);
+  opacity: 0.9;
   min-height: 100px;
   font-size: 50px;
   width: 80%;
@@ -35,6 +36,7 @@
 }
 
 .recipeCard {
+  opacity: 0.93;
   min-height: 500px;
   min-width: 500px;
   border-radius: 50px;
@@ -45,6 +47,7 @@
 }
 
 .beerCard {
+  opacity: 0.93;
   min-height: 500px;
   min-width: 500px;
   max-width: 800px;
@@ -53,6 +56,10 @@
   -moz-border-radius: 50px;
   -ms-border-radius: 50px;
   -o-border-radius: 50px;
+}
+
+.foodStats {
+  font-size: 25px;
 }
 
 .full-width {
@@ -83,7 +90,7 @@
 }
 
 body {
-  background-image: url(../../assets/img/eaters-collective-ESmxug33C0c-unsplash.jpg);
+  background-image: url(../../assets/images/eaters-collective-ESmxug33C0c-unsplash.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   background-color: var(--mainBGColor);
