@@ -26,7 +26,7 @@ async function chuckQuote() {
 
       quoteMessageEl.textContent = "Quote: " + data.value;
 
-    }
+    })
 	 }
 
 let summary = {
@@ -34,7 +34,7 @@ let summary = {
 
 }
 
-var chuckQuoteEL = document.getElementById('chuckQuote');
+// var chuckQuoteEL = document.getElementById('chuckQuote');
 var ronQuoteEL = document.getElementById('ronQuote');
 var nicholasQuoteEL = document.getElementById('nicholasQuote');
 var michaelQuoteEL = document.getElementById('michaelQuote');
@@ -158,6 +158,3 @@ async function nicholasCageQuote() {
     });
   return;
 }
-
-    })
-  }
