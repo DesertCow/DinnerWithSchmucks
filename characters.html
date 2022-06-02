@@ -5,16 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Characters</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css"> -->
+  <link rel="stylesheet" href="assets/css/characters_style.css">
   <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="container">
+    <div class="background-image"></div>
 
-      
-      
-      
+    <div class="main">
+
       <!-- Character select heading -->
       <nav>
         <h1>Choose your character!</h1>
@@ -25,29 +25,29 @@
         <div class="mike">
           <img src="./assets/images/prison mike.png" width="250" height="250"  alt="Prison Mike"/>
             <h1>Michael Scott</h1>
-          <button class="btn">Generate Quote</button>
+          <button class="btn" button id="michael-quote">Generate Quote</button>
         </div>
 
         <div class="ron">
           <img src="./assets/images/ron-swanson.png" width="250" height="250" alt="Angry Ron Swanson" />
           <h1>Ron Swanson</h1>
-          <button class="btn">Generate Quote</button>
+          <button class="btn" buton id="ron-quote">Generate Quote</button>
         </div>
 
         <div class="nick">
           <img src="./assets/images/nick-cage.png" width="250" height="250" alt="Nicholas Cage" />
           <h1>Nicholas Cage</h1>
-          <button class="btn">Generate Quote</button>
+          <button class="btn" button id="nicholas-quote">Generate Quote</button>
         </div>
 
         <div class="chuck">
           <img src="./assets/images/chuck_norris_PNG10.png" width="250" height="250" alt="Chuck Norris" />
           <h1>Chuck Norris</h1>
-          <button class="btn">Generate Quote</button>
+          <button class="btn" button id="chuckQuote">Generate Quote</button>
         </div>
       </div>
 
-      <div class="quote-message">
+      <div class="quote-message" id="quoteMessage">
         <h1>Your quote will appear in the summary page along with your recipe and beer.</h1>
       </div>
 
@@ -55,4 +55,5 @@
     </div>
   
 </body>
+<script src="assets/js/characters_script.js"></script>
 </html>
