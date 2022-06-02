@@ -4,105 +4,49 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.2/css/metro-all.min.css">
-  <link rel="stylesheet" href="assets/css/summary.css" />
+  <link rel="stylesheet" href="./assets/css/summary.css">
   <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
 
   <title>Summary</title>
 
-  <style>
-    * {
-      font-family: 'Major Mono Display', monospace;
-    }
-
-    body {
-      background-image: url(./assets/images/summary-bg.jpeg);
-      background-repeat: no-repeat;
-      background-size: 150%;
-      background-position: center center;
-      margin: 100px;
-    }
-
-    #quoteContainer {
-      background-color: black;
-      border-radius: 15px;
-      background: rgba(0, 0, 0, 0.55)
-    }
-
-    #quoteText {
-      color: white;
-      position: relative;
-      font-size: 2rem;
-    }
-
-    h1 {
-      font-size: 5rem;
-      color: white;
-      font-weight: 600;
-    }
-
-    .btn {
-      font-size: 1.5rem;
-    }
-
-    .btn:hover {
-    color: #fff;
-    cursor: pointer;
-    }
-
-    .btn:before {
-    transition: 0.5s all ease;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    right: 50%;
-    bottom: 0;
-    opacity: 0;
-    content: "";
-    background-color: green;
-    }
-
-    .btn:hover:before {
-    transition: 0.5s all ease;
-    left: 0;
-    right: 0;
-    opacity: 1;
-    z-index: -1;
-    }
-    
-  </style>
 </head>
 
-<body class="bg-image">
-  <div class="container-fluid image-overlay">
-    <div class="row navbar border">
-      <h1 class="offset-4">Dinner With Schmucks</h1>
+<body id="body" class="mt-6 mb-20 mx-20">
+  <div id="pageContainer" class="container-fluid">
+    <div class="row">
+      <h1 class="mx-auto mb-5 fg-white">Dinner With Schmucks</h1>
     </div>
     <div class="row">
-      <div id="portrait" class="col-5 border">
-        <img class="w-100" src="https://www.incimages.com/uploaded_files/image/1920x1080/parks-and-recreation_32716.jpg" alt="portrait">
+      <div id="portrait" class="cell-5">
+        <!-- Placeholder for character image -->
+        <img class="w-100 border-radius-10" src="https://www.incimages.com/uploaded_files/image/1920x1080/parks-and-recreation_32716.jpg" alt="portrait">
       </div>
-      <div id="quoteContainer" class="col-7">
-        <div id="quote" class="col-12">
-          <q id="quoteText" class="offset-1 col-11">History began on July 4, 1776. Everything that happened before that was a mistake.</q>
-          <p class="col-2 offset-10" id="quoteText">- Ron Swanson</p>
+      <div id="quoteContainer" class="cell-7 border-radius-10">
+        <div id="quote" class="cell-12">
+          <!-- Placeholder for character quote  -->
+          <q id="quoteText" class="d-flex w-100 fg-white">History began on July 4, 1776. Everything that happened before that was a mistake.</q>
+          <p class="d-flex flex-justify-end w-100 fg-white" id="quoteText">- Ron Swanson</p>
         </div>
       </div> 
     </div>
     <div class="row">
-      <div class="col-6 border">
-        <img src="https://www.befunky.com/images/wp/wp-2021-03-recipe-card-maker-cookbook-inspired.jpg?auto=webp&format=jpg&width=944" alt="Recipe" class="w-100">
+      <div class="cell-6">
+        <!-- Placeholder for recipe  -->
+        <img src="https://www.befunky.com/images/wp/wp-2021-03-recipe-card-maker-cookbook-inspired.jpg?auto=webp&format=jpg&width=944" alt="Recipe" class="w-100 border-radius-10">
       </div>
-      <div class="col-4 border">
-        <img src="https://www.theglobeandmail.com/resizer/CkjVCqSlzimcJFClO_2oSCU0-JM=/1500x1000/filters:quality(80):format(webp)/cloudfront-us-east-1.images.arcpublishing.com/tgam/Z2CJUPI45NHQPMKSVT6CDBTPZA.jpg" alt="Beer" class="w-100">
+      <div class="cell-4">
+        <!-- Placeholder for beer -->
+        <img src="https://www.theglobeandmail.com/resizer/CkjVCqSlzimcJFClO_2oSCU0-JM=/1500x1000/filters:quality(80):format(webp)/cloudfront-us-east-1.images.arcpublishing.com/tgam/Z2CJUPI45NHQPMKSVT6CDBTPZA.jpg" alt="Beer" class="w-100 border-radius-10">
       </div>
-      <div id="share" class="col-2 border">
-        <button id="share" class="col-12 row-2 btn">Share</button>
-        <button id="reset" class="col-12 row-2 btn" onclick="index.html">Home</button>
+      <div class="cell-2">
+        <!-- Share and reset buttons -->
+        <button id="share" class="cell-12 border-radius-5 btn">Share</button>
+        <a id="reset" href="index.html"><button id="reset" class="col-12 row-2 border-radius-5 btn">Home</button></a>
       </div>
     </div> 
   </div>
-  <script></script>
 </body>
-
+  <script src="./assets/js/script.js"></script>
 </html>
