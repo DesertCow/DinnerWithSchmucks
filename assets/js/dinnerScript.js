@@ -90,6 +90,7 @@ async function getRandomDrink() {
       beerCardBeerTitleEL.textContent = summary.drinkName;
       beerImgEL.src = summary.drinkPictureURL;
       beerCardBeerFactsEL.textContent = summary.drinkInstructions;
+      updateSessionStore();
 
       return;
 
@@ -132,15 +133,30 @@ async function getRandomDinner() {
       titleDrinkEL.textContent = summary.drinkName;
       recipeNameTitleEL.textContent = summary.mealName;
 
+      updateSessionStore();
+
       return;
     })
 }
 
+// ========================== Local Store ==========================
+
+function updateSessionStore() {
+
+  localStorage.setItem("QuoteSessionData", JSON.stringify(summary));
+
+  console.log("Photo: " + summary.mealPictureURL)
+
+}
+
+function loadSessionStore() {
+  summary = JSON.parse(localStorage.getItem("QuoteSessionData"));
+
+}
+
 function init() {
 
-  //Load data from session storeage...
-
-
+  loadSessionStore();
 
 }
 
