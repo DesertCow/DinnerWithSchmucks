@@ -40,16 +40,6 @@ let summary = {
 
 summaryPageButton.addEventListener("click", function (clickEvent) {
 
-  //recipeCardNameTitleEL.textContent = "Daves Famous Bruger";
-  //recipeNameTitleEL.textContent = recipeCardNameTitleEL.textContent;
-  //recipeCardFullrecipeEL.textContent = "This is where all the detailed recipe information goes....";
-  //recipeImgEL.src = "./assets/images/burger_example.jpg";
-
-  //beerCardBeerTitleEL.textContent = "Fosters";
-  //beerCardBeerFactsEL.textContent = "Taste like beer";
-
-  //beerImgEL.src = "./assets/images/FOSTERS-Beer.png";
-  //beerCardBeerFactsEL.textContent = "The first beer in the world was brewed by the ancient Chinese around the year 7000 BCE (known as kui). In the west, however, the process now recognized as beer brewing began in Mesopotamia at the Godin Tepe settlement now in modern - day Iran between 3500 - 3100 BCE."
 
 
 });
@@ -149,6 +139,9 @@ async function getRandomDinner() {
 function init() {
 
   //Load data from session storeage...
+
+
+
 }
 
 // ========================== MAIN START ==========================
