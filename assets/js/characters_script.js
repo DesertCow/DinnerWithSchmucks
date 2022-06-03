@@ -10,12 +10,12 @@ const key = {
 
 var quoteMessageEl = document.getElementById('quote-message')
 
+
 let summary = {
   "joke": "~~BAD JOKE ~~",
   "author": "VOID",
   "year": "1950",
   "movieTitle": "SNAKES ON A PLANE"
-
 }
 
 var chuckQuoteEL = document.getElementById('chuckQuote');
@@ -172,5 +172,6 @@ async function nicholasCageQuote() {
 
     });
   return;
-}
 
+  
+}
