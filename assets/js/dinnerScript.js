@@ -20,6 +20,16 @@ var beerImgEL = document.querySelector(".beerImg");
 var recipeImgEL = document.querySelector(".recipeImg");
 
 
+let summary = {
+  "joke": "~~BAD JOKE ~~",
+  "author": "VOID",
+  "year": "1950",
+  "movieTitle": "SNAKES ON A PLANE",
+  "drinkName": "Irish Carbomb",
+  "drinkInstructions": "Put the lime in the coconut...",
+  "drinkPictureURL": "https://www.thecocktaildb.com/images/media/drink/kugu2m1504735473.jpg"
+}
+
 
 // ################################## Button Listeners ##################################
 
@@ -39,7 +49,7 @@ summaryPageButton.addEventListener("click", function (clickEvent) {
 
 });
 
-// ################################## Mouse Over/Out Listeners ##################################
+// ################################## Mouse In/Out Listeners ##################################
 
 summaryPageButton.addEventListener('mouseover', function handleMouseOver() {
 
@@ -55,5 +65,50 @@ summaryPageButton.addEventListener('mouseout', function handleMouseOut() {
   document.getElementById("summaryButtonShadow").style.boxShadow = "none";
 });
 
+// ################################## Functions ##################################
+
+async function getRandomDrink() {
+
+  var apiURL = "https://thecocktaildb.com/api/json/v1/1/random.php";
+
+  fetch(apiURL)
+    .then(function (respone) {
+
+      if (respone.status != 200) {
+        console.log("ERROR API(" + respone.status + ") from " + apiURL);
+      }
+
+      return respone.json();
+    })
+    .then(function (data) {
+
+      console.log(data);
+
+      summary.drinkName = data.drinks[0].strDrink;
+      summary.drinkInstructions = data.drinks[0].strInstructions;
+      summary.drinkPictureURL = data.drinks[0].strDrinkThumb;
+
+      console.log("Random Drink = " + summary.drinkName);
+      console.log("Drink Instructions = " + summary.drinkInstructions);
+      console.log("Drink Picture = " + summary.drinkPictureURL);
+
+      beerCardBeerTitleEL.textContent = summary.drinkName;
+      beerImgEL.src = summary.drinkPictureURL;
+      beerCardBeerFactsEL.textContent = summary.drinkInstructions;
+
+      return;
+
+    })
+}
+
+function init() {
+
+  //Load data from session storeage...
+}
+
 // ========================== MAIN ==========================
+
+init();
+
+getRandomDrink();
 
