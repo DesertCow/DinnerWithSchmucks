@@ -12,18 +12,27 @@
 <body>
   
   <div class="wrapper d-flex justify-content-center align-items-end">
+
     <div class="container">
+
+      <section class="mid-break">
+        <p>test</p>
+      </section>
+
       <header class="jumbotron">
-        <h1 class="display-3 recipeNameTitle text-center mt-5">Daves Famous Bruger</h1>
-        <h3>paired with a delicious</h3>
-        <h3 class="titleDrink">Tequila Surprise</h3>
+        <h1 class="display-3 recipeNameTitle text-center mt-5">loading...</h1>
+        <div class="pairedItems">
+          <h3 >PAIRED WITH A DELICIOUS</h3>
+          <h3 class="titleDrink" id="drinks">loading...</h3>
+        </div>
       </header>
+
       <div class="d-flex flex-row flex-justify-around mt-8">
         <card data-role="panel" class="recipeCard m-5 p-5">
           <div class="card-header text-center recipeCardNameTitle">
-            Daves Famous Burger
+            
           </div>
-          <div class="card-content p-2 recipeCardFullrecipe text-center">          
+          <div id="recipe-text" class="card-content p-2 recipeCardFullrecipe text-center">          
             <img class="col recipeImg" src="https://www.themealdb.com/images/media/meals/1520084413.jpg" alt="Current Recipe Recommendation" style="width: 250px; margin:20px;">
             <h3 class="row m-3 foodStats remark dark"></h3>
           </div>
@@ -33,8 +42,8 @@
             <h1 class="text-center">Fosters</h1>
           </div>
           <div class="p-2 m-3">
-            <div class="row card-content text-left">
-              <img class="row beerImg p-2 m-2 d-flex justify-content-center" src="./assets/images/Default_Drink.jpg" alt="Current Beer Recommendation" style="width: 250px; margin:20px;">
+            <div id="alc-image" class="row card-content text-left">
+              <img id="drink-img" class="row beerImg p-2 m-2 d-flex justify-content-center" src="./assets/images/Default_Drink.jpg" alt="Current Beer Recommendation" style="width: 250px; margin:20px;">
               <h3 class="row m-3 drinkInstructionsTitle remark yellow">Drink Instructions:<p>
               <p class="row beerCardBeerFacts m-3"><p>
               <hr>
@@ -42,8 +51,13 @@
           </div>
         </card>
       </div>
-      <div class="row m-5 p-5 d-flex justify-content-center">
-        <a href="summary.html"><p id="summaryButtonShadow" class="card-body text-center p-9 m-5 summaryButton">Summary Page</pid=class=></a>
+
+      <section class="mid-break">
+        <p>test</p>
+      </section>
+
+      <div id="summarybutt" class="row m-5 p-5 d-flex justify-content-center">
+        <a href="summary.html"><p id="summaryButtonShadow" class="card-body text-center p-9 m-5 summaryButton"></pid=class=>Summary Page</a>
       </div>
     </div>
   </div>

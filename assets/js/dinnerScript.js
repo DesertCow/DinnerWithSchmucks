@@ -57,7 +57,7 @@ summaryPageButton.addEventListener('mouseover', function handleMouseOver() {
 summaryPageButton.addEventListener('mouseout', function handleMouseOut() {
 
   summaryPageButton.style.backgroundColor = '#C3D9AA';
-  document.getElementById("summaryButtonShadow").style.boxShadow = "none";
+  document.getElementById("summaryButtonShadow").style.boxShadow = "1px 1px 30px black";
 });
 
 // ################################## Functions ##################################
@@ -102,7 +102,7 @@ async function getRandomDinner() {
 
   fetch(apiURL)
     .then(function (respone) {
-
+      console.log(respone)
       if (respone.status != 200) {
         console.log("ERROR API(" + respone.status + ") from " + apiURL);
       } else {
