@@ -1,4 +1,4 @@
-// Chuck Norris Button API
+
 const key = {
   method: 'GET',
   headers: {
@@ -10,6 +10,7 @@ const key = {
 
 var quoteMessageEl = document.getElementById('quote-message')
 
+
 let summary = {
   "joke": "~~BAD JOKE ~~",
   "author": "VOID",
@@ -19,7 +20,7 @@ let summary = {
 
 var chuckQuoteEL = document.getElementById('chuckQuote');
 var ronQuoteEL = document.getElementById('ronQuote');
-// var nicholasQuoteEL = document.getElementById('nicholasQuote');
+var nicholasQuoteEL = document.getElementById('nicholasQuote');
 var michaelQuoteEL = document.getElementById('michaelQuote');
 
 
@@ -28,32 +29,30 @@ var userInfoEL = document.getElementById('userDirections');
 
 
 
+chuckQuoteEL.addEventListener("click", function (clickEvent) {
 
-// document.getElementById('chuckQuote').addEventListener ('click', chuckQuote);
+  chuckQuote();
 
-// chuckQuoteEL.addEventListener("click", function (clickEvent) {
+});
 
-//   chuckQuote();
-
-// });
 
 ronQuoteEL.addEventListener("click", function (clickEvent) {
 
-//   ronSwansonQuote();
+  ronSwansonQuote();
 
-// });
+});
 
-// nicholasQuoteEL.addEventListener("click", function (clickEvent) {
+nicholasQuoteEL.addEventListener("click", function (clickEvent) {
 
-//   nicholasCageQuote();
+  nicholasCageQuote();
 
-// });
+});
 
-// michaelQuoteEL.addEventListener("click", function (clickEvent) {
+michaelQuoteEL.addEventListener("click", function (clickEvent) {
 
-//   michaelScottQuote();
+  michaelScottQuote();
 
-// });
+});
 
 //##################### Functions #####################
 
@@ -143,46 +142,15 @@ async function nicholasCageQuote() {
   var apiURL = "https://nicolas-cage-quotes.herokuapp.com/quotes?info=true";
 
 
-//   fetch(apiURL)
-//     .then(function (response) {
 
-//       //console.log(response.status)
-
-//       return response.json();
-//     })
-//     .then(function (data) {
-
-//       summary.joke = data;
-//       // quoteMessageEL.textContent = summary.joke;
-
-//       //jokeEL.textContent = summary.joke;
-
-//       var jokeEL = document.createElement("h2");
-//       quoteMessageEL.removeChild(quoteMessageEL.firstChild);
-//       quoteMessageEL.appendChild(jokeEL);
-
-//       return summary.joke;
-
-//     });
-//   return;
-// }
-
-document.getElementById('nicholasQuote').addEventListener
-  ('click', nicholasQuote);
-
-async function nicholasQuote() {
-
-  fetch('https://nicolas-cage-quotes.herokuapp.com/quotes')
+  fetch(apiURL)
     .then(function (response) {
+
+      //console.log(response.status)
 
       return response.json();
     })
-
-
     .then(function (data) {
-      console.log(data);
-
-      quoteMessageEl.textContent = "Quote: " + data.value;
 
       summary.joke = data[0].quote;
       summary.movieTitle = data[0].title;
@@ -197,8 +165,10 @@ async function nicholasQuote() {
       quoteMessageEL.replaceChild(jokeEL, quoteMessageEL.childNodes[1]);
       quoteMessageEL.replaceChild(movieEL, quoteMessageEL.childNodes[2]);
 
+      return summary.joke;
+
     });
   return;
 
-  
+
 }
