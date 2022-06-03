@@ -27,31 +27,32 @@ var michaelQuoteEL = document.getElementById('michaelQuote');
 var quoteMessageEL = document.getElementById('quote-message');
 var userInfoEL = document.getElementById('userDirections');
 
+var hiddenButtonsEl = document.getElementById("hidden-buttons")
 
 
 chuckQuoteEL.addEventListener("click", function (clickEvent) {
 
   chuckQuote();
-
+  buttonDisplayer();
 });
 
 
 ronQuoteEL.addEventListener("click", function (clickEvent) {
 
   ronSwansonQuote();
-
+  buttonDisplayer();
 });
 
 nicholasQuoteEL.addEventListener("click", function (clickEvent) {
 
   nicholasCageQuote();
-
+  buttonDisplayer();
 });
 
 michaelQuoteEL.addEventListener("click", function (clickEvent) {
 
   michaelScottQuote();
-
+  buttonDisplayer();
 });
 
 //##################### Functions #####################
@@ -171,4 +172,9 @@ async function nicholasCageQuote() {
   return;
 
 
+}
+
+function buttonDisplayer() {
+  console.log("TEST");
+  hiddenButtonsEl.style.opacity = "100"
 }
