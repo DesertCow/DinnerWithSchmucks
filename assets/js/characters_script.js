@@ -69,10 +69,13 @@ async function chuckQuote() {
 
     .then(function (data) {
 
-      summary.joke = data.value + " - The Chuck Norris";
+      summary.joke = data.value;
       var jokeEL = document.createElement("h1");
+      var authorEL = document.createElement("h3");
+      authorEL.textContent = "~ Chuck Norris ~";
       jokeEL.textContent = summary.joke;
       quoteMessageEL.replaceChild(jokeEL, quoteMessageEL.childNodes[1]);
+      quoteMessageEL.replaceChild(authorEL, quoteMessageEL.childNodes[2]);
 
     })
 }
@@ -90,10 +93,15 @@ async function ronSwansonQuote(reqCount, term) {
     })
     .then(function (data) {
 
-      summary.joke = data + " - Ron Swanson";
+      summary.joke = data;
       var jokeEL = document.createElement("h1");
+      var authorEL = document.createElement("h3");
+
       jokeEL.textContent = summary.joke;
+      authorEL.textContent = "~ Ron Swanson ~";
+
       quoteMessageEL.replaceChild(jokeEL, quoteMessageEL.childNodes[1]);
+      quoteMessageEL.replaceChild(authorEL, quoteMessageEL.childNodes[2]);
 
       return summary.joke;
 
@@ -118,10 +126,13 @@ async function michaelScottQuote() {
     })
     .then(function (data) {
 
-      summary.joke = data.quote + " - Michael Scott";
+      summary.joke = data.quote;
       var jokeEL = document.createElement("h1");
+      var authorEL = document.createElement("h3");
       jokeEL.textContent = summary.joke;
+      authorEL.textContent = " ~ Michael Scott ~";
       quoteMessageEL.replaceChild(jokeEL, quoteMessageEL.childNodes[1]);
+      quoteMessageEL.replaceChild(authorEL, quoteMessageEL.childNodes[2]);
 
       return summary.joke;
 
@@ -144,17 +155,15 @@ async function nicholasCageQuote() {
     })
     .then(function (data) {
 
-      console.log(data[0]);
-
       summary.joke = data[0].quote;
       summary.movieTitle = data[0].title;
       summary.year = data[0].year;
 
       var jokeEL = document.createElement("h1");
-      var movieEL = document.createElement("h1");
+      var movieEL = document.createElement("h3");
 
       jokeEL.textContent = summary.joke;
-      movieEL.textContent = "Nicholas Cage in " + " " + summary.movieTitle + " (" + summary.year + ")";
+      movieEL.textContent = "~ Nicholas Cage - " + " " + summary.movieTitle + " (" + summary.year + ") ~";
 
       quoteMessageEL.replaceChild(jokeEL, quoteMessageEL.childNodes[1]);
       quoteMessageEL.replaceChild(movieEL, quoteMessageEL.childNodes[2]);
