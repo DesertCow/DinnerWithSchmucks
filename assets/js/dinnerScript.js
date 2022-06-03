@@ -7,7 +7,6 @@
 // Grab Display Fields in HTML
 
 var recipeNameTitleEL = document.querySelector(".recipeNameTitle");
-var titleDrinkEL = document.querySelector(".titleDrink");
 
 var recipeCardNameTitleEL = document.querySelector(".recipeCardNameTitle");
 var recipeCardFullrecipeEL = document.querySelector(".recipeCardFullrecipe");
@@ -21,20 +20,6 @@ var beerImgEL = document.querySelector(".beerImg");
 var recipeImgEL = document.querySelector(".recipeImg");
 
 
-let summary = {
-  "joke": "~~BAD JOKE ~~",
-  "author": "VOID",
-  "year": "1950",
-  "movieTitle": "SNAKES ON A PLANE",
-  "drinkName": "Irish Carbomb",
-  "drinkInstructions": "Put the lime in the coconut...",
-  "drinkPictureURL": "https://www.thecocktaildb.com/images/media/drink/kugu2m1504735473.jpg",
-  "mealName": "Brie wrapped in prosciutto & brioche",
-  "mealInstructions": "Mix the flour, 1 tsp salt, ...",
-  "mealPictureURL": "VOID",
-  "mealYouTubeURL": "VOID"
-}
-
 
 // ################################## Button Listeners ##################################
 
@@ -44,7 +29,7 @@ summaryPageButton.addEventListener("click", function (clickEvent) {
 
 });
 
-// ################################## Mouse In/Out Listeners ##################################
+// ################################## Mouse Over/Out Listeners ##################################
 
 summaryPageButton.addEventListener('mouseover', function handleMouseOver() {
 
@@ -60,8 +45,10 @@ summaryPageButton.addEventListener('mouseout', function handleMouseOut() {
   document.getElementById("summaryButtonShadow").style.boxShadow = "none";
 });
 
-// ################################## Functions ##################################
+// ========================== MAIN ==========================
 
+<<<<<<< HEAD
+=======
 async function getRandomDrink() {
 
   var apiURL = "https://thecocktaildb.com/api/json/v1/1/random.php";
@@ -153,3 +140,4 @@ getRandomDinner();
 
 
 // ========================== MAIN END ==========================
+>>>>>>> ef628581e8dcabe40f73057f8756eed6a6ce8183
