@@ -90,3 +90,11 @@ img {
   font-style: bold;
   font-family: 'Major Mono Display', monospace;
 }
+
+div h2 {
+  font-size: 20px;
+}
+
+div h2 {
+  font-size: 50px;
+}

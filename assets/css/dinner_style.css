@@ -72,7 +72,7 @@
 }
 
 .beerCardBeerFacts {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .beerCardBeerTitle {
@@ -94,4 +94,18 @@ body {
   background-repeat: no-repeat;
   background-size: 100%;
   background-color: var(--mainBGColor);
+}
+
+.beerImg {
+  border-radius: 25px;
+  /* opacity: 0.92 */
+}
+
+.drinkInstructionsTitle {
+  font-size: 20px;
+
+}
+
+.recipeNameTitle h3 {
+  font-size: 100px;
 }
