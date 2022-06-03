@@ -12,6 +12,9 @@ var quoteMessageEl = document.getElementById('quote-message')
 
 let summary = {
   "joke": "~~BAD JOKE ~~",
+  "author": "VOID",
+  "year": "1950",
+  "movieTitle": "SNAKES ON A PLANE"
 
 }
 
@@ -128,7 +131,9 @@ async function michaelScottQuote() {
 
 async function nicholasCageQuote() {
 
-  var apiURL = "https://nicolas-cage-quotes.herokuapp.com/quotes";
+  var apiURL = "https://nicolas-cage-quotes.herokuapp.com/quotes?info=true";
+
+
 
   fetch(apiURL)
     .then(function (response) {
@@ -139,10 +144,20 @@ async function nicholasCageQuote() {
     })
     .then(function (data) {
 
-      summary.joke = data + " - Nicholas Cage";
+      console.log(data[0]);
+
+      summary.joke = data[0].quote;
+      summary.movieTitle = data[0].title;
+      summary.year = data[0].year;
+
       var jokeEL = document.createElement("h1");
+      var movieEL = document.createElement("h1");
+
       jokeEL.textContent = summary.joke;
+      movieEL.textContent = "Nicholas Cage in " + " " + summary.movieTitle + " (" + summary.year + ")";
+
       quoteMessageEL.replaceChild(jokeEL, quoteMessageEL.childNodes[1]);
+      quoteMessageEL.replaceChild(movieEL, quoteMessageEL.childNodes[2]);
 
       return summary.joke;
 
