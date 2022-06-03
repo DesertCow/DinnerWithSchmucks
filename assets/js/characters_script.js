@@ -34,6 +34,7 @@ chuckQuoteEL.addEventListener("click", function (clickEvent) {
 
   chuckQuote();
   buttonDisplayer();
+  // updateSessionStore();
 });
 
 
@@ -41,18 +42,21 @@ ronQuoteEL.addEventListener("click", function (clickEvent) {
 
   ronSwansonQuote();
   buttonDisplayer();
+  // updateSessionStore();
 });
 
 nicholasQuoteEL.addEventListener("click", function (clickEvent) {
 
   nicholasCageQuote();
   buttonDisplayer();
+  // updateSessionStore();
 });
 
 michaelQuoteEL.addEventListener("click", function (clickEvent) {
 
   michaelScottQuote();
   buttonDisplayer();
+  // updateSessionStore();
 });
 
 //##################### Functions #####################
@@ -68,12 +72,17 @@ async function chuckQuote() {
     .then(function (data) {
 
       summary.joke = data.value;
+      summary.author = "Chuck Norris";
       var jokeEL = document.createElement("h1");
       var authorEL = document.createElement("h3");
       authorEL.textContent = "~ Chuck Norris ~";
       jokeEL.textContent = summary.joke;
       quoteMessageEL.replaceChild(jokeEL, quoteMessageEL.childNodes[1]);
       quoteMessageEL.replaceChild(authorEL, quoteMessageEL.childNodes[2]);
+
+      updateSessionStore();
+
+      return;
 
     })
 }
@@ -92,6 +101,7 @@ async function ronSwansonQuote(reqCount, term) {
     .then(function (data) {
 
       summary.joke = data;
+      summary.author = "Ron Swanson";
       var jokeEL = document.createElement("h1");
       var authorEL = document.createElement("h3");
 
@@ -100,6 +110,8 @@ async function ronSwansonQuote(reqCount, term) {
 
       quoteMessageEL.replaceChild(jokeEL, quoteMessageEL.childNodes[1]);
       quoteMessageEL.replaceChild(authorEL, quoteMessageEL.childNodes[2]);
+
+      updateSessionStore();
 
       return summary.joke;
 
@@ -125,12 +137,15 @@ async function michaelScottQuote() {
     .then(function (data) {
 
       summary.joke = data.quote;
+      summary.author = "Michael Scott";
       var jokeEL = document.createElement("h1");
       var authorEL = document.createElement("h3");
       jokeEL.textContent = summary.joke;
       authorEL.textContent = " ~ Michael Scott ~";
       quoteMessageEL.replaceChild(jokeEL, quoteMessageEL.childNodes[1]);
       quoteMessageEL.replaceChild(authorEL, quoteMessageEL.childNodes[2]);
+
+      updateSessionStore();
 
       return summary.joke;
 
@@ -156,6 +171,7 @@ async function nicholasCageQuote() {
       summary.joke = data[0].quote;
       summary.movieTitle = data[0].title;
       summary.year = data[0].year;
+      summary.author = "Nicholas Cage";
 
       var jokeEL = document.createElement("h1");
       var movieEL = document.createElement("h3");
@@ -165,6 +181,8 @@ async function nicholasCageQuote() {
 
       quoteMessageEL.replaceChild(jokeEL, quoteMessageEL.childNodes[1]);
       quoteMessageEL.replaceChild(movieEL, quoteMessageEL.childNodes[2]);
+
+      updateSessionStore();
 
       return summary.joke;
 
@@ -177,4 +195,18 @@ async function nicholasCageQuote() {
 function buttonDisplayer() {
   console.log("TEST");
   hiddenButtonsEl.style.opacity = "100"
+}
+
+
+function updateSessionStore() {
+
+  summary
+
+  localStorage.setItem("QuoteSessionData", JSON.stringify(summary));
+
+  summaryStore = JSON.parse(localStorage.getItem("QuoteSessionData"));
+
+  console.log("Author: " + summaryStore.author);
+  console.log("Joke: " + summaryStore.joke);
+
 }
