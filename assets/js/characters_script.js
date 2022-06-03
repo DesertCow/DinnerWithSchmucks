@@ -200,8 +200,6 @@ function buttonDisplayer() {
 
 function updateSessionStore() {
 
-  summary
-
   localStorage.setItem("QuoteSessionData", JSON.stringify(summary));
 
   summaryStore = JSON.parse(localStorage.getItem("QuoteSessionData"));
