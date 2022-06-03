@@ -14,7 +14,7 @@ document.getElementById('chuckQuote').addEventListener
   ('click', chuckQuote);
 
 async function chuckQuote() {
-  
+
   fetch('https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random', key)
     .then(function (response) {
 
@@ -31,7 +31,7 @@ async function chuckQuote() {
 
 // var chuckQuoteEL = document.getElementById('chuckQuote');
 var ronQuoteEL = document.getElementById('ronQuote');
-var nicholasQuoteEL = document.getElementById('nicholasQuote');
+// var nicholasQuoteEL = document.getElementById('nicholasQuote');
 var michaelQuoteEL = document.getElementById('michaelQuote');
 
 
@@ -44,29 +44,29 @@ var userInfoEL = document.getElementById('userInfo');
 
 // document.getElementById('chuckQuote').addEventListener ('click', chuckQuote);
 
-chuckQuoteEL.addEventListener("click", function (clickEvent) {
+// chuckQuoteEL.addEventListener("click", function (clickEvent) {
 
-  chuckQuote();
+//   chuckQuote();
 
-});
+// });
 
-ronQuoteEL.addEventListener("click", function (clickEvent) {
+// ronQuoteEL.addEventListener("click", function (clickEvent) {
 
-  ronSwansonQuote();
+//   ronSwansonQuote();
 
-});
+// });
 
-nicholasQuoteEL.addEventListener("click", function (clickEvent) {
+// nicholasQuoteEL.addEventListener("click", function (clickEvent) {
 
-  nicholasCageQuote();
+//   nicholasCageQuote();
 
-});
+// });
 
-michaelQuoteEL.addEventListener("click", function (clickEvent) {
+// michaelQuoteEL.addEventListener("click", function (clickEvent) {
 
-  michaelScottQuote();
+//   michaelScottQuote();
 
-});
+// });
 
 //var tempJoke = chuckQuote();
 
@@ -126,30 +126,50 @@ async function michaelScottQuote() {
 //       console.log(content)
 //     })
 
-async function nicholasCageQuote() {
+// async function nicholasCageQuote() {
 
-  var apiURL = "https://nicolas-cage-quotes.herokuapp.com/quotes";
+//   var apiURL = "https://nicolas-cage-quotes.herokuapp.com/quotes";
 
-  fetch(apiURL)
+//   fetch(apiURL)
+//     .then(function (response) {
+
+//       //console.log(response.status)
+
+//       return response.json();
+//     })
+//     .then(function (data) {
+
+//       summary.joke = data;
+//       // quoteMessageEL.textContent = summary.joke;
+
+//       //jokeEL.textContent = summary.joke;
+
+//       var jokeEL = document.createElement("h2");
+//       quoteMessageEL.removeChild(quoteMessageEL.firstChild);
+//       quoteMessageEL.appendChild(jokeEL);
+
+//       return summary.joke;
+
+//     });
+//   return;
+// }
+
+document.getElementById('nicholasQuote').addEventListener
+  ('click', nicholasQuote);
+
+async function nicholasQuote() {
+
+  fetch('https://nicolas-cage-quotes.herokuapp.com/quotes')
     .then(function (response) {
-
-      //console.log(response.status)
 
       return response.json();
     })
+
     .then(function (data) {
+      console.log(data);
 
-      summary.joke = data;
-      // quoteMessageEL.textContent = summary.joke;
+      quoteMessageEl.textContent = "Quote: " + data.value;
 
-      //jokeEL.textContent = summary.joke;
-
-      var jokeEL = document.createElement("h2");
-      quoteMessageEL.removeChild(quoteMessageEL.firstChild);
-      quoteMessageEL.appendChild(jokeEL);
-
-      return summary.joke;
-
-    });
-  return;
+    })
 }
+
