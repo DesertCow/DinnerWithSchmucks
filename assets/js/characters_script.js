@@ -8,8 +8,7 @@ const key = {
   }
 };
 
-var quoteMessageEl = document.getElementById('quote-message')
-
+//##################### Variable Decleration #####################
 
 let summary = {
   "joke": "~~BAD JOKE ~~",
@@ -125,19 +124,13 @@ async function michaelScottQuote() {
 
   apiURL = "https://api.allorigins.win/raw?url=" + apiURL;
 
-  console.log(apiURL)
-
   fetch(apiURL)
     .then(function (response) {
-
-      console.log(response.status)
 
       return response.json();
     })
     .then(function (data) {
 
-      console.log(data);
-      console.log("Quote = " + data.quote);
 
       summary.joke = data.quote;
       summary.author = "Michael Scott";
@@ -160,12 +153,8 @@ async function nicholasCageQuote() {
 
   var apiURL = "https://nicolas-cage-quotes.herokuapp.com/quotes?info=true";
 
-
-
   fetch(apiURL)
     .then(function (response) {
-
-      //console.log(response.status)
 
       return response.json();
     })
