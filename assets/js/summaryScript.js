@@ -20,13 +20,8 @@ let summary = {
   "mealYouTubeURL": "VOID"
 }
 
-
-
-
-
-
-
 function updatePage() {
+
 
   authorTextEL.textContent = summary.author;
   quoteTextEL.textContent = summary.joke;
@@ -35,11 +30,7 @@ function updatePage() {
   drinkPhotoEL.src = summary.drinkPictureURL;
   drinkInstructionsEL.textContent = summary.drinkInstructions;
 
-  console.log("TEst!!!" + summary.joke);
-
 }
-
-
 
 
 
@@ -47,14 +38,12 @@ function updatePage() {
 
 function updateSessionStore() {
 
-  localStorage.setItem("QuoteSessionData", JSON.stringify(summary));
-
-  console.log("Photo: " + summary.mealPictureURL)
+  sessionStorage.setItem("QuoteSessionData", JSON.stringify(summary));
 
 }
 
 function loadSessionStore() {
-  summary = JSON.parse(localStorage.getItem("QuoteSessionData"));
+  summary = JSON.parse(sessionStorage.getItem("QuoteSessionData"));
 
 }
 

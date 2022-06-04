@@ -1,11 +1,10 @@
 //
 //
-// // Clayton Skaggs
-// 5-31-2022
+//
+// 
 // ==================== Varriable Decleration =====================
 
-// Grab Display Fields in HTML
-
+// #################### HTML Page Elements ####################
 var recipeNameTitleEL = document.querySelector(".recipeNameTitle");
 var titleDrinkEL = document.querySelector(".titleDrink");
 
@@ -15,10 +14,11 @@ var recipeCardFullrecipeEL = document.querySelector(".recipeCardFullrecipe");
 var beerCardBeerTitleEL = document.querySelector(".beerCardBeerTitle");
 var beerCardBeerFactsEL = document.querySelector(".beerCardBeerFacts");
 
-var summaryPageButton = document.querySelector(".summaryButton");
-
 var beerImgEL = document.querySelector(".beerImg");
 var recipeImgEL = document.querySelector(".recipeImg");
+
+// #################### HTML Buttons ####################
+var summaryPageButton = document.querySelector(".summaryButton");
 
 
 let summary = {
@@ -77,15 +77,10 @@ async function getRandomDrink() {
     })
     .then(function (data) {
 
-      // console.log(data);
 
       summary.drinkName = data.drinks[0].strDrink;
       summary.drinkInstructions = data.drinks[0].strInstructions;
       summary.drinkPictureURL = data.drinks[0].strDrinkThumb;
-
-      //console.log("Random Drink = " + summary.drinkName);
-      //console.log("Drink Instructions = " + summary.drinkInstructions);
-      //console.log("Drink Picture = " + summary.drinkPictureURL);
 
       beerCardBeerTitleEL.textContent = summary.drinkName;
       beerImgEL.src = summary.drinkPictureURL;
@@ -119,14 +114,9 @@ async function getRandomDinner() {
       summary.mealPictureURL = data.meals[0].strMealThumb;
       summary.mealYouTubeURL = data.meals[0].strYoutube;
 
-      console.log(summary.mealName);
-      console.log(summary.mealInstructions);
-      console.log(summary.mealPictureURL);
-      console.log(summary.mealYouTubeURL);
 
       recipeCardNameTitleEL.textContent = summary.mealName;
-      // recipeImgEL.src = summary.mealPictureURL;
-      recipeImgEL.src = 'https://www.themealdb.com/images/media/meals/1520084413.jpg';
+      recipeImgEL.src = summary.mealPictureURL;
       recipeCardFullrecipeEL.textContent = summary.mealInstructions;
 
 
@@ -143,14 +133,13 @@ async function getRandomDinner() {
 
 function updateSessionStore() {
 
-  localStorage.setItem("QuoteSessionData", JSON.stringify(summary));
+  sessionStorage.setItem("QuoteSessionData", JSON.stringify(summary));
 
-  console.log("Photo: " + summary.mealPictureURL)
 
 }
 
 function loadSessionStore() {
-  summary = JSON.parse(localStorage.getItem("QuoteSessionData"));
+  summary = JSON.parse(sessionStorage.getItem("QuoteSessionData"));
 
 }
 
