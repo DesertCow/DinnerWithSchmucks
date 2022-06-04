@@ -34,7 +34,7 @@ function updatePage() {
 
 
 
-// ========================== Local Store ==========================
+// ========================== Session Store ==========================
 
 function updateSessionStore() {
 

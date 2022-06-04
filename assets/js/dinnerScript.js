@@ -129,7 +129,7 @@ async function getRandomDinner() {
     })
 }
 
-// ========================== Local Store ==========================
+// ========================== Session Store ==========================
 
 function updateSessionStore() {
 
