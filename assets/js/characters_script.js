@@ -121,11 +121,7 @@ async function ronSwansonQuote(reqCount, term) {
 
 async function michaelScottQuote() {
 
-  // var apiURL = "https://michael-scott-quotes-api.herokuapp.com/randomQuote";
   var apiURL = "https://michael-scott-quotes-api.herokuapp.com/randomQuote";
-  https://officeapi.dev/api/characters/random
-  https://officeapi.dev/api/characters/:5e93b4a43af44260882e33b0/quotes/random
-  quotes / random
 
   apiURL = "https://api.allorigins.win/raw?url=" + apiURL;
 
