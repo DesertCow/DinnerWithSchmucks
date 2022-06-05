@@ -1,8 +1,8 @@
 //
 //
-// // Clayton Skaggs
-// 5-31-2022
-// ==================== Varriable Decleration =====================
+//
+// 
+// ################################## Varriable Decleration ##################################
 
 // Grab Display Fields in HTML
 
@@ -40,8 +40,6 @@ let summary = {
 
 summaryPageButton.addEventListener("click", function (clickEvent) {
 
-
-
 });
 
 // ################################## Mouse In/Out Listeners ##################################
@@ -77,15 +75,9 @@ async function getRandomDrink() {
     })
     .then(function (data) {
 
-      // console.log(data);
-
       summary.drinkName = data.drinks[0].strDrink;
       summary.drinkInstructions = data.drinks[0].strInstructions;
       summary.drinkPictureURL = data.drinks[0].strDrinkThumb;
-
-      //console.log("Random Drink = " + summary.drinkName);
-      //console.log("Drink Instructions = " + summary.drinkInstructions);
-      //console.log("Drink Picture = " + summary.drinkPictureURL);
 
       beerCardBeerTitleEL.textContent = summary.drinkName;
       beerImgEL.src = summary.drinkPictureURL;
@@ -103,7 +95,7 @@ async function getRandomDinner() {
 
   fetch(apiURL)
     .then(function (respone) {
-      console.log(respone)
+
       if (respone.status != 200) {
         console.log("ERROR API(" + respone.status + ") from " + apiURL);
       } else {
@@ -119,15 +111,9 @@ async function getRandomDinner() {
       summary.mealPictureURL = data.meals[0].strMealThumb;
       summary.mealYouTubeURL = data.meals[0].strYoutube;
 
-      console.log(summary.mealName);
-      console.log(summary.mealInstructions);
-      console.log(summary.mealPictureURL);
-      console.log(summary.mealYouTubeURL);
-
       recipeCardNameTitleEL.textContent = summary.mealName;
       recipeImgEL.src = summary.mealPictureURL;
       recipeCardFullrecipeEL.textContent = summary.mealInstructions;
-
 
       titleDrinkEL.textContent = summary.drinkName;
       recipeNameTitleEL.textContent = summary.mealName;
@@ -143,9 +129,6 @@ async function getRandomDinner() {
 function updateSessionStore() {
 
   sessionStorage.setItem("QuoteSessionData", JSON.stringify(summary));
-
-  console.log("Photo: " + summary.mealPictureURL)
-
 }
 
 function loadSessionStore() {

@@ -238,6 +238,6 @@ Version 0.1</h5>
 <br>
 
 - Version 0.5 HTML: **May 31st**
-- Final Version Deadline: **June 6th**
+- Final Version Deadline: **June 7th**
 
 

@@ -76,7 +76,6 @@ function loadSessionStore() {
 function init() {
 
   loadSessionStore();
-
   updateImage();
 
 }
