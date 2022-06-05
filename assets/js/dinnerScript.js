@@ -4,6 +4,7 @@
 // 5-31-2022
 // ==================== Varriable Decleration =====================
 
+// #################### HTML Page Elements ####################
 // Grab Display Fields in HTML
 
 var recipeNameTitleEL = document.querySelector(".recipeNameTitle");
@@ -15,11 +16,11 @@ var recipeCardFullrecipeEL = document.querySelector(".recipeCardFullrecipe");
 var beerCardBeerTitleEL = document.querySelector(".beerCardBeerTitle");
 var beerCardBeerFactsEL = document.querySelector(".beerCardBeerFacts");
 
-var summaryPageButton = document.querySelector(".summaryButton");
-
 var beerImgEL = document.querySelector(".beerImg");
 var recipeImgEL = document.querySelector(".recipeImg");
 
+// #################### HTML Buttons ####################
+var summaryPageButton = document.querySelector(".summaryButton");
 
 let summary = {
   "joke": "~~BAD JOKE ~~",
