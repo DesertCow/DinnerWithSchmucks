@@ -18,25 +18,31 @@
 *{ margin: 0px;}
 
 .recipeNameTitle {
-  font-size: 80px;
+  font-size: 100px;
+  line-height: 100px;
   color: var(--titleTextColor);
   text-shadow: 1px 1px 10px black;
 }
 
 #drinks {
-  font-size: 50px;
+  font-size: 60px;
   margin-top: 10px;
   color: var(--titleTextColor);
+  line-height: 60px;
 }
 
 .pairedItems {
   margin: 10px auto;
   margin-bottom: 100px;
-  line-height: 2rem;
+  line-height: 35px;
   text-align:center;
-  font-size: 25px;
+  font-size: 35px;
   color: white;
   text-shadow: 1px 1px 5px black;
+}
+
+#main-content {
+  flex-wrap: wrap;
 }
 
 .summaryButton {
@@ -99,19 +105,18 @@
   font-size: 20px;
 }
 
-.beerCardBeerTitle {
-  font-size: 50px;
-  display: flex;
-  justify-content: center;
-  line-height: 50px;
+/* erics added code */
 
+.recipeCardNameTitle, .beerCardBeerTitle {
+  font-size: 45px;
+  font-family: 'Major Mono Display', monospace;
+  text-align: center;
+  line-height: 50px;
 }
 
-.recipeCardNameTitle {
-  font-size: 50px;
-  display: flex;
-  justify-content: center;
-  line-height: 50px;
+.recipeCardFullrecipe {
+  font-size: 17px;
+  line-height: 1.5em;
 }
 
 body {
@@ -119,10 +124,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  background-color: var(--mainBGColor);
+  background-color: rgb(56, 56, 56);
 }
 
-.beerImg {
+.beerImg, .recipeImg {
   border-radius: 25px;
 }
 
@@ -140,4 +145,22 @@ body {
 #summarybutt {
   display: block;
   justify-content: center;
+  font-family: 'Major Mono Display', monospace;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 992px) {
+  .main-content {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #summaryButtonShadow {
+    font-size: 20px;
+  }
 }
