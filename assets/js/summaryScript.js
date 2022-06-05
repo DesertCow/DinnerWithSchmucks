@@ -60,7 +60,7 @@ function updateImage() {
 
 }
 
-// ========================== Local Store ==========================
+// ========================== Session Store ==========================
 
 function updateSessionStore() {
 
