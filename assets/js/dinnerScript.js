@@ -138,18 +138,18 @@ async function getRandomDinner() {
     })
 }
 
-// ========================== Local Store ==========================
+// ========================== Session Store ==========================
 
 function updateSessionStore() {
 
-  localStorage.setItem("QuoteSessionData", JSON.stringify(summary));
+  sessionStorage.setItem("QuoteSessionData", JSON.stringify(summary));
 
   console.log("Photo: " + summary.mealPictureURL)
 
 }
 
 function loadSessionStore() {
-  summary = JSON.parse(localStorage.getItem("QuoteSessionData"));
+  summary = JSON.parse(sessionStorage.getItem("QuoteSessionData"));
 
 }
 
