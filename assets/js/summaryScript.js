@@ -8,6 +8,7 @@ var drinkPhotoEL = document.querySelector(".drinkPhoto");
 var drinkInstructionsEL = document.querySelector(".drinkInstructions");
 
 var mealNameEL = document.querySelector(".mealName");
+var mealPictureURLEL = document.querySelector(".mealPictureURL");
 var mealInstructionsEL = document.querySelector(".mealInstructions");
 
 var michaelScott = "assets/images/summary-Michael.jpeg";
@@ -40,6 +41,7 @@ function updatePage() {
 
   mealNameEL.textContent = summary.mealName;
   mealInstructionsEL.textContent = summary.mealInstructions;
+  mealPictureURLEL.src = summary.mealPictureURL;
 
   // UPDATING CHARACTER PHOTO
   if (summary.author == "Michael Scott") {
