@@ -16,6 +16,7 @@ var ronSwanson = "https://static0.srcdn.com/wordpress/wp-content/uploads/2020/12
 var nicholasCage = "https://i.kym-cdn.com/photos/images/facebook/000/456/353/05a.jpg";
 var chuckNorris = "https://images.metadata.sky.com/pd-image/b1fa4f7f-cec8-4819-874f-306ae4e85a46/16-9/1000";
 
+
 let summary = {
   "joke": "~~BAD JOKE ~~",
   "author": "VOID",
