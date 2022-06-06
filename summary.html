@@ -8,35 +8,30 @@
   <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.2/css/metro-all.min.css">
   <link rel="stylesheet" href="./assets/css/summary.css">
   <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
-
   <title>Summary</title>
 
 </head>
 
 <body class="mx-20">
   <div class="container-fluid">
-
     <!-- TITLE BAR -->
     <header class="row">
       <h1 class="titleBar mx-auto mb-5 display4 fg-white">Dinner For Schmucks</h1>
     </header>
-
     <!-- FIRST ROW -->
     <div class="row">
       <!-- CHARACTER PORTRAIT -->
       <figure class="authorPhoto cell-5 img-container border-radius-10">
         <img class="authorImage border-radius-10" src="https://www.incimages.com/uploaded_files/image/1920x1080/parks-and-recreation_32716.jpg" alt="Character Portrait">
       </figure>
-
       <!-- QUOTE -->
       <div class="quoteContainer cell-6 border-radius-10 ml-10">
         <article class="cell-12">
           <q class="quoteTex† cell-11 h3 fg-white">QUOTE</q>
-          <p class="authorTex† offset-9 cell-3 h4 fg-white" id="quoteText">AUTHOR</p>
+          <p class="authorTex† offset-9 cell-3 h3 fg-white" id="quoteText">AUTHOR</p>
         </article>
       </div> 
     </div>
-
     <!-- SECOND ROW -->
     <div class="row row2">
       <!-- MEAL -->
@@ -44,7 +39,6 @@
         <h3 class="mealName d-flex flex-justify-center h1 fg-white">MEAL NAME</h3>
         <p class="mealInstructions h6 fg-white">MEAL INSTRUCTIONS</p>
       </article>
-
       <!-- DRINK -->
       <div class="drinkContainer cell-3 ml-10 border-radius-10">
         <p class="drinkName d-flex flex-justify-center h1 fg-white">Drink Name</p>
@@ -53,39 +47,32 @@
         </figure>  
         <p class="drinkInstructions d-flex flex-justify-end h6 fg-white">BARLEY AND WHEAT</p>
       </div>
-
-      <!-- SHARE RESET BUTTONS-->
-      <aside class="cell-2">
-        <div class="start-button border-radius-10">
-          <div class="button-text cell-12">
-            <a href="">Share</a>
+      <!-- SHARE BUTTONS -->
+      <section class="shareButtons">
+        <aside class="cell-2">
+          <div class="start-button border-radius-10">
+            <div id="tryAgain" class="button-text cell-12">
+              <a href="./characters.html">Play Again!</a>
+            </div>
           </div>
-        </div>
-        <div class="start-button border-radius-10">
-          <div class="button-text cell-12">
-            <a href="./characters.html">Try it again!</a>
-          </div>
-        </div>
-      </aside>
-
-    </div>
-
-    <!-- FOOTER INFO -->
-    <div> 
-      <footer>
-        <div class="footer-content">
-          <h3>Created by</h3>
-          <ul>
-            <li>Clayton Skaggs</li>
-            <li>Eric Nguyen</li>
-            <li>Parin Thalangdee</li>
-            <li>Dante Stargiotti</li>
-          </ul>
-        </div>
-      </footer>
-      
+        </aside>
+      </section>
     </div>
   </div>
-</body>
-  <script src="assets/js/summaryScript.js"></script>
+  <!-- FOOTER INFO -->
+      <div> 
+        <footer>
+          <div class="footer-content">
+           <h3>Created by</h3>
+           <ul>
+              <li>Clayton Skaggs</li>
+             <li>Eric Nguyen</li>
+              <li>Parin Thalangdee</li>
+             <li>Dante Stargiotti</li>
+           </ul>
+         </div>
+        </footer>
+      </div>
+    <script src="assets/js/summaryScript.js"></script>
+  </body>
 </html>
