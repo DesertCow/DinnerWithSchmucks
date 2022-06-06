@@ -10,15 +10,12 @@
   <title>Dinner Selection</title>
 </head>
 <body>
-  
-  <div class="wrapper d-flex justify-content-center align-items-end">
-
+  <div id="main-content" class="wrapper d-flex justify-content-center align-items-end">
     <div class="container">
 
       <section class="mid-break">
         <p>test</p>
       </section>
-
       <header class="jumbotron">
         <h1 class="display-3 recipeNameTitle text-center mt-5">loading...</h1>
         <div class="pairedItems">
@@ -26,42 +23,39 @@
           <h3 class="titleDrink" id="drinks">loading...</h3>
         </div>
       </header>
-
-      <div class="d-flex flex-row flex-justify-around mt-8">
+      <div class="d-flex flex-row flex-justify-around mt-8 main-content">
         <card data-role="panel" class="recipeCard m-5 p-5">
-          <div class="card-header text-center recipeCardNameTitle">
-            
+          <div class="card-header recipeCardNameTitle">
+            <h1 class="text-center"></h1>
           </div>
-          <div id="recipe-text" class="card-content p-2 recipeCardFullrecipe text-center">          
-            <img class="col recipeImg" src="https://www.themealdb.com/images/media/meals/1520084413.jpg" alt="Current Recipe Recommendation" style="width: 250px; margin:20px;">
-            <h3 class="row m-3 foodStats remark dark"></h3>
+            <div id="recipe-text" class="p-2 m-3">          
+              <div class="card-content p-2">
+                <img class="col recipeImg" src="./assets/images/loading.gif" style="width: 100%;">
+                <h3 class="row m-3 recipeCardFullrecipe remark yellow text-center "></h3>
+              </div>
           </div>
         </card>
         <card data-role="panel" class="beerCard m-5 p-5">
-          <div class="card-header beerCardBeerTitle">
-            <h1 class="text-center">Fosters</h1>
-          </div>
+            <div class="card-header beerCardBeerTitle">
+              <h1 class="text-center"></h1>
+            </div>
           <div class="p-2 m-3">
             <div id="alc-image" class="row card-content text-left">
-              <img id="drink-img" class="row beerImg p-2 m-2 d-flex justify-content-center" src="./assets/images/Default_Drink.jpg" alt="Current Beer Recommendation" style="width: 250px; margin:20px;">
+              <img id="drink-img" class="row beerImg p-2 m-2" src="./assets/images/loading.gif" style="width: 100%;">
               <h3 class="row m-3 drinkInstructionsTitle remark yellow">Drink Instructions:<p>
               <p class="row beerCardBeerFacts m-3"><p>
-              <hr>
             </div>
           </div>
         </card>
       </div>
-
       <section class="mid-break">
         <p>test</p>
       </section>
-
       <div id="summarybutt" class="row m-5 p-5 d-flex justify-content-center">
-        <a href="summary.html"><p id="summaryButtonShadow" class="card-body text-center p-9 m-5 summaryButton"></pid=class=>Summary Page</a>
+        <a href="summary.html"><p id="summaryButtonShadow" class="card-body text-center p-9 m-5 summaryButton"></pid=class=>Summary Page</a>      
       </div>
     </div>
   </div>
-
   <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
   <script src="./assets/js/dinnerScript.js"></script>
 </body>

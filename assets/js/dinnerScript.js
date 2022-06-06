@@ -2,9 +2,11 @@
 //
 //
 // 
-// ==================== Varriable Decleration =====================
+// ################################## Varriable Decleration ##################################
 
 // #################### HTML Page Elements ####################
+// Grab Display Fields in HTML
+
 var recipeNameTitleEL = document.querySelector(".recipeNameTitle");
 var titleDrinkEL = document.querySelector(".titleDrink");
 
@@ -19,7 +21,6 @@ var recipeImgEL = document.querySelector(".recipeImg");
 
 // #################### HTML Buttons ####################
 var summaryPageButton = document.querySelector(".summaryButton");
-
 
 let summary = {
   "joke": "~~BAD JOKE ~~",
@@ -40,23 +41,22 @@ let summary = {
 
 summaryPageButton.addEventListener("click", function (clickEvent) {
 
-
-
 });
 
 // ################################## Mouse In/Out Listeners ##################################
 
 summaryPageButton.addEventListener('mouseover', function handleMouseOver() {
 
-  summaryPageButton.style.backgroundColor = '#63863C';
+  summaryPageButton.style.backgroundColor = '#3c8667';
   document.getElementById("summaryButtonShadow").style.boxShadow = "10px 10px 50px 50px #C2CAB9";
-  document.getElementById("summaryButtonShadow").style.opacity = "0.90";
+  document.getElementById("summaryPageButton").style.opacity = "0.90";
+  document.getElementById("summaryPageButton").style.opacity = "0.90";
 
 });
 
 summaryPageButton.addEventListener('mouseout', function handleMouseOut() {
 
-  summaryPageButton.style.backgroundColor = '#C3D9AA';
+  summaryPageButton.style.backgroundColor = '#729e5c';
   document.getElementById("summaryButtonShadow").style.boxShadow = "1px 1px 30px black";
 });
 
@@ -77,10 +77,11 @@ async function getRandomDrink() {
     })
     .then(function (data) {
 
-
       summary.drinkName = data.drinks[0].strDrink;
       summary.drinkInstructions = data.drinks[0].strInstructions;
       summary.drinkPictureURL = data.drinks[0].strDrinkThumb;
+
+      console.log(summary.drinkName)
 
       beerCardBeerTitleEL.textContent = summary.drinkName;
       beerImgEL.src = summary.drinkPictureURL;
@@ -98,7 +99,7 @@ async function getRandomDinner() {
 
   fetch(apiURL)
     .then(function (respone) {
-      console.log(respone)
+
       if (respone.status != 200) {
         console.log("ERROR API(" + respone.status + ") from " + apiURL);
       } else {
@@ -114,11 +115,9 @@ async function getRandomDinner() {
       summary.mealPictureURL = data.meals[0].strMealThumb;
       summary.mealYouTubeURL = data.meals[0].strYoutube;
 
-
       recipeCardNameTitleEL.textContent = summary.mealName;
       recipeImgEL.src = summary.mealPictureURL;
       recipeCardFullrecipeEL.textContent = summary.mealInstructions;
-
 
       titleDrinkEL.textContent = summary.drinkName;
       recipeNameTitleEL.textContent = summary.mealName;
@@ -129,13 +128,11 @@ async function getRandomDinner() {
     })
 }
 
-// ========================== Local Store ==========================
+// ========================== Session Store ==========================
 
 function updateSessionStore() {
 
   sessionStorage.setItem("QuoteSessionData", JSON.stringify(summary));
-
-
 }
 
 function loadSessionStore() {

@@ -33,7 +33,6 @@ chuckQuoteEL.addEventListener("click", function (clickEvent) {
 
   chuckQuote();
   buttonDisplayer();
-  // updateSessionStore();
 });
 
 
@@ -41,21 +40,18 @@ ronQuoteEL.addEventListener("click", function (clickEvent) {
 
   ronSwansonQuote();
   buttonDisplayer();
-  // updateSessionStore();
 });
 
 nicholasQuoteEL.addEventListener("click", function (clickEvent) {
 
   nicholasCageQuote();
   buttonDisplayer();
-  // updateSessionStore();
 });
 
 michaelQuoteEL.addEventListener("click", function (clickEvent) {
 
   michaelScottQuote();
   buttonDisplayer();
-  // updateSessionStore();
 });
 
 //##################### Functions #####################
