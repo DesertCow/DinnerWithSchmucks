@@ -5,7 +5,7 @@ DinnerWithSchmucks
 body {
   background-image: url(../images/summary-bg.jpeg);
   background-repeat: no-repeat;
-  background-size: 200%;
+  background-size: cover;
   background-position: center center;
   background-attachment: fixed;
   background-color: rgb(58, 58, 58);
@@ -31,6 +31,7 @@ body {
   margin-top: 50px;
   display: inline-flex;
 }
+
 /* MEAL SECTION  */
 .mealContainer {
   background: rgba(0, 0, 0, 0.5);
