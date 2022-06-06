@@ -4,7 +4,7 @@ DinnerWithSchmucks
 
 :root {
 
-  --summaryButtonColor: #C3D9AA;
+  --summaryButtonColor: #729e5c;
   --titleTextColor: #f7ae5b;
 
 }
@@ -41,7 +41,7 @@ DinnerWithSchmucks
 
 .summaryButton {
   background-color: var(--summaryButtonColor);
-  opacity: 0.92;
+  opacity: 1;
   min-height: 100px;
   font-size: 50px;
   width: 80%;
@@ -99,8 +99,6 @@ DinnerWithSchmucks
   font-size: 20px;
 }
 
-/* erics added code */
-
 .recipeCardNameTitle, .beerCardBeerTitle {
   font-size: 45px;
   font-family: 'Major Mono Display', monospace;
@@ -140,6 +138,19 @@ body {
   display: block;
   justify-content: center;
   font-family: 'Major Mono Display', monospace;
+}
+
+.summaryButton:hover {
+  text-decoration: none;
+}
+
+a {
+  color:white !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+  opacity: 100% !important;
 }
 
 .main-content {

@@ -47,15 +47,16 @@ summaryPageButton.addEventListener("click", function (clickEvent) {
 
 summaryPageButton.addEventListener('mouseover', function handleMouseOver() {
 
-  summaryPageButton.style.backgroundColor = '#63863C';
+  summaryPageButton.style.backgroundColor = '#3c8667';
   document.getElementById("summaryButtonShadow").style.boxShadow = "10px 10px 50px 50px #C2CAB9";
-  document.getElementById("summaryButtonShadow").style.opacity = "0.90";
+  document.getElementById("summaryPageButton").style.opacity = "0.90";
+  document.getElementById("summaryPageButton").style.opacity = "0.90";
 
 });
 
 summaryPageButton.addEventListener('mouseout', function handleMouseOut() {
 
-  summaryPageButton.style.backgroundColor = '#C3D9AA';
+  summaryPageButton.style.backgroundColor = '#729e5c';
   document.getElementById("summaryButtonShadow").style.boxShadow = "1px 1px 30px black";
 });
 
@@ -79,6 +80,8 @@ async function getRandomDrink() {
       summary.drinkName = data.drinks[0].strDrink;
       summary.drinkInstructions = data.drinks[0].strInstructions;
       summary.drinkPictureURL = data.drinks[0].strDrinkThumb;
+
+      console.log(summary.drinkName)
 
       beerCardBeerTitleEL.textContent = summary.drinkName;
       beerImgEL.src = summary.drinkPictureURL;
