@@ -1,4 +1,4 @@
-
+// DEFINING SESSIONSTORAGE VARIABLES
 var quoteTextEL = document.querySelector(".quoteTex†");
 var authorTextEL = document.querySelector(".authorTex†");
 var authorImageEL = document.querySelector(".authorImage");
@@ -8,14 +8,12 @@ var drinkPhotoEL = document.querySelector(".drinkPhoto");
 var drinkInstructionsEL = document.querySelector(".drinkInstructions");
 
 var mealNameEL = document.querySelector(".mealName");
-// var mealPictureURLEL = document.querySelector(".mealPicture");
 var mealInstructionsEL = document.querySelector(".mealInstructions");
 
 var michaelScott = "assets/images/summary-Michael.jpeg";
 var ronSwanson = "assets/images/summary-Ron.jpeg";
 var nicholasCage = "assets/images/summary-Nicholas.jpeg";
 var chuckNorris = "assets/images/summary-Chuck.jpeg";
-
 
 let summary = {
   "joke": "~~BAD JOKE ~~",
@@ -32,7 +30,7 @@ let summary = {
 }
 
 function updatePage() {
-
+  // UPDATING TEXT CONTENT AND DRINK PHOTO
   authorTextEL.textContent = summary.author;
   quoteTextEL.textContent = summary.joke;
 
@@ -42,10 +40,8 @@ function updatePage() {
 
   mealNameEL.textContent = summary.mealName;
   mealInstructionsEL.textContent = summary.mealInstructions;
-}
 
-function updateImage() {
-
+  // UPDATING CHARACTER PHOTO
   if (summary.author == "Michael Scott") {
     authorImageEL.src = michaelScott;
   }
@@ -58,7 +54,6 @@ function updateImage() {
   else if (summary.author == "Chuck Norris") {
     authorImageEL.src = chuckNorris;
   }
-
 }
 
 // ========================== Session Store ==========================
@@ -77,7 +72,6 @@ function loadSessionStore() {
 function init() {
 
   loadSessionStore();
-  updateImage();
 
 }
 
