@@ -81,9 +81,10 @@ async function getRandomDrink() {
       summary.drinkInstructions = data.drinks[0].strInstructions;
       summary.drinkPictureURL = data.drinks[0].strDrinkThumb;
 
-      console.log(summary.drinkName)
+      // console.log(summary.drinkName);
 
-      beerCardBeerTitleEL.textContent = summary.drinkName;
+      titleDrinkEL.textContent = data.drinks[0].strDrink;
+      beerCardBeerTitleEL.textContent = data.drinks[0].strDrink;
       beerImgEL.src = summary.drinkPictureURL;
       beerCardBeerFactsEL.textContent = summary.drinkInstructions;
       updateSessionStore();
@@ -120,6 +121,7 @@ async function getRandomDinner() {
       recipeCardFullrecipeEL.textContent = summary.mealInstructions;
 
       titleDrinkEL.textContent = summary.drinkName;
+      console.log("Test1 =" + summary.drinkName);
       recipeNameTitleEL.textContent = summary.mealName;
 
       updateSessionStore();
