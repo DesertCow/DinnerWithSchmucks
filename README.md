@@ -25,8 +25,6 @@ Version 0.1</h5>
 ---
 
 <div align="center">
-🚀 <a href="https://github.com/DesertCow/DinnerWithSchmucks">https://github.com/DesertCow/DinnerWithSchmucks</a> 🚀
-<br>
 <br>
 🛰️ <a href="https://desertcow.github.io/DinnerWithSchmucks">https://desertcow.github.io/DinnerWithSchmucks</a> 🛰️
 </div>
@@ -240,6 +238,6 @@ Version 0.1</h5>
 <br>
 
 - Version 0.5 HTML: **May 31st**
-- Final Version Deadline: **June 6th**
+- Final Version Deadline: **June 7th**
 
 
