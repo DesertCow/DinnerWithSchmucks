@@ -11,10 +11,11 @@ var mealNameEL = document.querySelector(".mealName");
 // var mealPictureURLEL = document.querySelector(".mealPicture");
 var mealInstructionsEL = document.querySelector(".mealInstructions");
 
-var michaelScott = "https://media.gq.com/photos/5a53e9fca929253c4d20a04f/16:9/w_1280,c_limit/does-the-office-hold-up-gq.jpg";
-var ronSwanson = "https://static0.srcdn.com/wordpress/wp-content/uploads/2020/12/Parks-and-Rec-The-Fight-opening-Ron-Swanson.jpg?q=50&fit=crop&w=740&h=370&dpr=1.5";
-var nicholasCage = "https://i.kym-cdn.com/photos/images/facebook/000/456/353/05a.jpg";
-var chuckNorris = "https://images.metadata.sky.com/pd-image/b1fa4f7f-cec8-4819-874f-306ae4e85a46/16-9/1000";
+var michaelScott = "assets/images/summary-Michael.jpeg";
+var ronSwanson = "assets/images/summary-Ron.jpeg";
+var nicholasCage = "assets/images/summary-Nicholas.jpeg";
+var chuckNorris = "assets/images/summary-Chuck.jpeg";
+
 
 let summary = {
   "joke": "~~BAD JOKE ~~",
