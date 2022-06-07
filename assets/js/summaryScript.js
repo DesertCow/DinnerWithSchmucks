@@ -1,3 +1,7 @@
+//
+// DinnerWithSchmucks
+// 
+
 // DEFINING SESSIONSTORAGE VARIABLES
 var quoteTextEL = document.querySelector(".quoteTex†");
 var authorTextEL = document.querySelector(".authorTex†");
