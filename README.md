@@ -8,8 +8,8 @@
 
 
 🎯 Project 1 🎯<br>
-(WW23.1) / June 6th 2022<br>
-Version 0.1</h5>
+(WW23.2) / June 7th 2022<br>
+Version 0.2</h5>
 </div>
 
 ---
@@ -76,8 +76,18 @@ Version 0.1</h5>
 </p>
 <h5 align="center">Summary Page w/Character Qoute <br>(summary.html)</h5>
 
+<br>
+<br>
 
+<h3 align="center">⚡ ⚡ Demo ⚡ ⚡</h3>
 
+----
+
+<p align="center">
+  <img src="./assets/images/DinnerWithSchmucks_Demo.gif" width="650" alt="Demo of the Dinner With Schmuck application")
+  
+<br>
+<br>
 <br>
 <br>
 
@@ -93,7 +103,7 @@ Version 0.1</h5>
 - Format: ````JSON / GET````
 - Notes: 
 
-  ##### API Calls
+  ###### API Calls
 
   - ````https://api.chucknorris.io/jokes/random?category={category}````
   - ````https://api.chucknorris.io/jokes/categories````
@@ -109,11 +119,67 @@ Version 0.1</h5>
 - Notes: 
   - The ````Access-Control-Allow-Origin```` header is set to ````*```` so that you can make requests from any domain.
 
-##### API Calls
+###### API Calls
 
   - ````https://ron-swanson-quotes.herokuapp.com/v2/quotes````
   - ````https://ron-swanson-quotes.herokuapp.com/v2/quotes/<count>````
   - ````https://ron-swanson-quotes.herokuapp.com/v2/quotes/search/<term>````
+
+<br>
+<br>
+
+#### Nicolas Cage API
+
+- Website: <https://github.com/donth77/nicolas-cage-quotes>
+- API Link: <https://nicolas-cage-quotes.herokuapp.com/>
+- Format: ````JSON / GET````
+- Notes:
+
+###### API Calls
+
+- ````https://nicolas-cage-quotes.herokuapp.com/quotes````
+<br>
+<br>
+
+#### Michael Scott API
+
+- Website: <https://github.com/rodrigoabb/michael_scott_API>
+- API Link: <https://michael-scott-quotes-api.herokuapp.com/>
+- Format: ````JSON / GET````
+- Notes:
+
+###### API Calls
+
+- ````https://michael-scott-quotes-api.herokuapp.com/randomQuote````
+<br>
+<br>
+
+#### Recipe API
+
+- Website: <https://www.themealdb.com/>
+- API Link: <https://www.themealdb.com/api/json/v1/1/>
+- Format: ````JSON / GET````
+- Notes:
+
+###### API Calls
+
+- ````https://www.themealdb.com/api/json/v1/1/random.php````
+<br>
+<br>
+
+#### Drink API
+
+- Website: <https://thecocktaildb.com/>
+- API Link: <https://thecocktaildb.com/api/json/v1/1/>
+- Format: ````JSON / GET````
+- Notes:
+
+###### API Calls
+
+- ````<https://thecocktaildb.com/api/json/v1/1/random.php>````
+<br>
+<br>
+
 
 <br>
 <br>
@@ -126,7 +192,7 @@ Version 0.1</h5>
 
 ##### 📚 getBeer()
 - ✉️: ~~ No Inputs ~~
-- 📦: *returns* **ARRAY**
+- 📦: *returns*: **ARRAY**
   - Beer name
   - Beer information
   - Beer picture
@@ -134,7 +200,7 @@ Version 0.1</h5>
 
 ##### 📚 getrecipe()
 - ✉️: ~~ No Inputs ~~
-- 📦: *returns* **ARRAY**
+- 📦: *returns*: **ARRAY**
   - recipe name
   - recipe facts
   - recipe picture
@@ -143,13 +209,13 @@ Version 0.1</h5>
 
 ##### 📚 chuckNorrisJoke()
 - ✉️: ~~ No Inputs ~~
-- 📦: *returns* random joke **STRING**
+- 📦: *returns*: random joke **STRING**
   - joke 
 <br>
 
 ##### 📚 nicolasCageQuote()
 - ✉️: ~~ No Inputs ~~
-- 📦: *returns* **ARRAY** with 
+- 📦: *returns*: **ARRAY**
     - qoute 
     - year 
     - movie
@@ -171,17 +237,47 @@ Version 0.1</h5>
 
 ##### 📚 ronSwansonQuote()
 - ✉️: ~~ No Inputs ~~
-- 📦: *returns* random quote text as **STRING**
+- 📦: *returns*: random quote text as **STRING**
     - quote
 <br>
 
 ##### 📚 michaelScottQuote()
 
 - ✉️: ~~ No Inputs ~~
-- 📦: *returns* random quote text as **STRING**
+- 📦: *returns*: random quote text as **STRING**
   - quote
 <br>
 <br>
+
+##### 📚 updateSessionStore()
+
+- ✉️: ~~ No Inputs ~~
+- STORE 🔑: "QuoteSessionData"
+- 📦: *returns*: VOID
+<br>
+<br>
+
+##### 📚 loadSessionStore()
+
+- ✉️: ~~ No Inputs ~~
+- LOAD 🔑: "QuoteSessionData"
+- 📦: *returns*: **Object** 
+  - joke
+  - author
+  - year
+  - movieTitle
+  - drinkName
+  - drinkInstructions
+  - drinkPictureURL
+  - mealName
+  - mealInstructions
+  - mealPictureURL
+  - mealYouTubeURL
+
+<br>
+<br>
+
+
 
 <h3 align="center">🖼️ 🖼️ CSS Information 🖼️ 🖼️</h3>
 
@@ -238,6 +334,6 @@ Version 0.1</h5>
 <br>
 
 - Version 0.5 HTML: **May 31st**
-- Final Version Deadline: **June 7th**
+- Final Version Deadline: **June 6th**
 
 

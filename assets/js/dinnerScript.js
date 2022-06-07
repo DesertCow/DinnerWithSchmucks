@@ -1,11 +1,8 @@
 //
-//
-//
+// DinnerWithSchmucks
 // 
-// ################################## Varriable Decleration ##################################
 
 // #################### HTML Page Elements ####################
-// Grab Display Fields in HTML
 
 var recipeNameTitleEL = document.querySelector(".recipeNameTitle");
 var titleDrinkEL = document.querySelector(".titleDrink");
@@ -49,8 +46,7 @@ summaryPageButton.addEventListener('mouseover', function handleMouseOver() {
 
   summaryPageButton.style.backgroundColor = '#3c8667';
   document.getElementById("summaryButtonShadow").style.boxShadow = "10px 10px 50px 50px #C2CAB9";
-  document.getElementById("summaryPageButton").style.opacity = "0.90";
-  document.getElementById("summaryPageButton").style.opacity = "0.90";
+  document.getElementById("summaryButtonShadow").style.opacity = "0.90";
 
 });
 
@@ -81,12 +77,11 @@ async function getRandomDrink() {
       summary.drinkInstructions = data.drinks[0].strInstructions;
       summary.drinkPictureURL = data.drinks[0].strDrinkThumb;
 
-      // console.log(summary.drinkName);
-
-      titleDrinkEL.textContent = data.drinks[0].strDrink;
+      titleDrinkEL.textContent = summary.drinkName;
       beerCardBeerTitleEL.textContent = data.drinks[0].strDrink;
       beerImgEL.src = summary.drinkPictureURL;
       beerCardBeerFactsEL.textContent = summary.drinkInstructions;
+
       updateSessionStore();
 
       return;
@@ -121,7 +116,6 @@ async function getRandomDinner() {
       recipeCardFullrecipeEL.textContent = summary.mealInstructions;
 
       titleDrinkEL.textContent = summary.drinkName;
-      console.log("Test1 =" + summary.drinkName);
       recipeNameTitleEL.textContent = summary.mealName;
 
       updateSessionStore();

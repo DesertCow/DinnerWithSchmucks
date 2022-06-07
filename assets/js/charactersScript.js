@@ -1,3 +1,6 @@
+//
+// DinnerWithSchmucks
+// 
 
 const key = {
   method: 'GET',
@@ -28,6 +31,7 @@ var userInfoEL = document.getElementById('userDirections');
 
 var hiddenButtonsEl = document.getElementById("hidden-buttons")
 
+// ################################## Button Listeners ##################################
 
 chuckQuoteEL.addEventListener("click", function (clickEvent) {
 
@@ -54,7 +58,7 @@ michaelQuoteEL.addEventListener("click", function (clickEvent) {
   buttonDisplayer();
 });
 
-//##################### Functions #####################
+// ################################## Functions ##################################
 
 async function chuckQuote() {
 
