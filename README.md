@@ -85,7 +85,9 @@ Version 0.2</h5>
 
 <p align="center">
   <img src="./assets/images/DinnerWithSchmucks_Demo.gif" width="650" alt="Demo of the Dinner With Schmuck application")
-
+  
+<br>
+<br>
 <br>
 <br>
 
@@ -332,6 +334,6 @@ Version 0.2</h5>
 <br>
 
 - Version 0.5 HTML: **May 31st**
-- Final Version Deadline: **June 7th**
+- Final Version Deadline: **June 6th**
 
 
